@@ -1,0 +1,36 @@
+/* Alert container */
+.alert-container{
+    display: flex;
+    width: 100%;
+    height: 50px;
+    border-radius: 0.25rem;
+    justify-content: space-between;
+}
+
+/* Target message and button */
+.alert-container > div{
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+/* Target message */
+.alert-container > :nth-child(1){
+    padding-left: 10px;
+    font-weight: bold;
+}
+
+/* Target button */
+.alert-container > :nth-child(2) > input{
+    height: 100%;
+    width: 50px;
+    background: transparent;
+    border: none;
+    font-weight: bold;
+}
+
+/* Target button on hover */
+.alert-container > :nth-child(2):hover > input{
+    background-color: rgba(155, 154, 154, 0.2);
+    cursor: pointer;
+}

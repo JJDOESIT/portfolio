@@ -1,159 +1,219 @@
-
+/* Target Home Container */
 .home-container{
     display: flex;
     height: calc(100% - 70px);
     width: 100%;
     overflow-y: scroll;
     overflow-x: hidden;
-}
-
-.home-image-side{
-    display: flex;
-    position: relative;
-    width: 30%;
-    height: 100%;
+    justify-content: space-evenly;
     align-items: center;
-    justify-content: center;
+    flex-wrap: wrap;
 }
 
-.home-logo-container{
-    display: flex;
-    position: relative;
-    margin-right: 50px;
-    opacity: 0;
-    animation: fade-in-down 1s 0.75s forwards;
-    height: fit-content;
-    width: fit-content;
-}
-
-
-.home-logo-container > img{
-    border-radius: 1rem;
-    width: 350px;
-    height: 500px;
-    z-index: 3;
-}
-
-.home-logo-container > :nth-child(2){
-    display: flex;
-    position: absolute;
-    width: 350px;
-    height: 500px;
-    background-color: rgb(46, 46, 46);
-    z-index: 2;
-    left: 10%;
-    bottom: -10%;
-}
-
-.home-text-side{
-    display: flex;
-    width: 60%;
-    height: 100%;
-    align-items: center;
-    justify-content: center;
-}
-
+/* Target the text container */
 .home-text-container{
-    display: flex;
     width: fit-content;
-    flex-direction: column;
+    margin-top: 5px;
 }
 
-.home-text-container > :nth-child(1), .home-text-container > :nth-child(2){
-    font-size: 4.5rem;
-    color: rgb(255, 255, 255);
+/* Target all p elements in the text container */
+.home-text-container > p{
+    font-size: max(3rem, 5vw);
+    color: white;
+    font-weight: bold;
     opacity: 0;
-    animation: fade-in-up 1.5s 1s forwards;
-
+    animation: fade-in-down 1s 1s forwards;
 }
 
+/* Target the dynamic text container */
 .dynamic-text{
     display: flex;
     opacity: 0;
-    animation: fade-in-up 1.5s 1.25s forwards;
+    animation: fade-in-up 1s 1s forwards;
 }
 
-.dynamic-text > :nth-child(1), .dynamic-text > :nth-child(2){
-    font-size: 2rem;
+/* Target all p elements in the dynamic text container */
+.dynamic-text > p{
+    font-size: max(2.5rem, 3vw);
     color: white;
 }
 
+/* Targte only the dynamic text in the dynamic text container */
 .dynamic-text > :nth-child(2){
-    margin-left: 5px;
-}
-
-.dynamic-text > :nth-child(2){
+    margin-left: 10px;
+    background: linear-gradient(to right, rgb(255,255,255), rgb(255, 210, 0));
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     position: relative;
 }
 
-.dynamic-text > :nth-child(2)::after{
-    content: "";
+/* Create a blinking cursor */
+.dynamic-text > :nth-child(2):after{
+    content: " ";
     position: absolute;
     width: 100%;
     height: 100%;
-    border-left: 2px solid white;
-    animation-name: cursor-blink;
-    animation-duration: 1.5s;
-    animation-timing-function: steps(2);
-    animation-fill-mode: backwards;
-    animation-iteration-count: infinite;
+    border-left: 3px solid white;
+    animation: cursor-blink 1.5s infinite;
 }
 
-@keyframes cursor-blink{
-    100% {
-        border: none;
+/* Target the button container */
+.home-button-container{
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    animation: fade-in-right 1s 1.5s forwards;
+}
+
+.contact-button-container{
+    padding: 30px;
+}
+
+/* Contact Button */
+.contact-button-container > input {
+  --b: 3px;   /* border thickness */
+  --s: .45em; /* size of the corner */
+  --color: rgb(185, 176, 67);
+
+  padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+  color: white;
+  --_p: var(--s);
+  background:
+    conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
+    var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+  transition: .3s linear, color 0s, background-color 0s;
+  outline: var(--b) solid #0000;
+  outline-offset: .6em;
+  font-size: 16px;
+  border: 0;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+/* Contact button */
+.contact-button-container > input:hover,
+.contact-button-container > input:focus-visible{
+  --_p: 0px;
+  outline-color: var(--color);
+  outline-offset: .05em;
+}
+
+/* Contact button */
+.contact-button-container > input:active {
+  background: var(--color);
+  color: white;
+}
+
+/* Quote button */
+.quote-button-container{
+    border-radius: 0.5rem;
+}
+
+/* Quote button */
+.quote-button-container > input{
+    background: none;
+    border: none;
+    color: white;
+    padding: 10px;
+}
+
+/* Quote button */
+.quote-button-container:hover{
+    background-color: rgb(0, 150, 255, 0.2);
+}
+
+/* Target the home image container */
+.home-image-container{
+    display: flex;
+    position: relative;
+    width: 25vw;
+    min-width: 300px;
+    opacity: 0;
+    animation: fade-in-up 1s 1s forwards;
+    margin-bottom: 50px;
+}
+
+/* Target the image in the home image container */
+.home-image-container > img{
+    z-index: 2;
+    border-radius: 0.5rem;
+    width: 100%;
+    height: 100%;
+}
+
+/* Create the offset background behind the image */
+.home-image-container > :nth-child(2){
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(50,50,50);
+    bottom: -10%;
+    left: 10%;
+    z-index: 1;
+}
+
+/* Create the text box in front of the image */
+.home-image-container > :nth-child(3){
+    display: flex;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    min-height: 100px;
+    min-width: 150px;
+    background-color: rgb(185, 176, 67);
+    z-index: 3;
+    bottom: 0;
+    left: -20%;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+/* Target the confetti */
+.explosion-container{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
+/* Target text box */
+.home-image-container > :nth-child(3)::-webkit-scrollbar{
+    display: none;
+}
+
+/* Target the text box */
+.home-image-container > :nth-child(3) > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    height: fit-content;
+
+}
+
+/* Target the text box */
+.home-image-container > :nth-child(3) p{
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+}
+
+/* 680px */
+@media (max-width: 680px){
+    .home-text-container > p{
+        font-size: max(1rem, 8vw);
+    }
+
+    .dynamic-text > p{
+        font-size: max(0.8rem, 5.5vw);
     }
 }
 
-@keyframes fade-in-up{
-    0% {
-        opacity: 0;
-        transform: translateY(50px);
+/* 550px */
+@media (max-width: 680px){
+    .home-image-container > :nth-child(3){
+        left: 0;
     }
 
-    100% {
-        opacity: 1;
-        transform: translateY(0px);  
-    }
 }
-
-@keyframes fade-in-down{
-    0% {
-        opacity: 0;
-        transform: translateY(-50px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0px);  
-    }
-}
-
-
-@media (max-width: 1200px){
-    .home-text-container{
-        width: 330px;
-    }
-}
-
-
-
-
-@media (max-width: 480px){
-    .home-logo-container > img{
-        width: 300px;
-        height: 450px;
-    }
-
-    .home-logo-container > :nth-child(2){
-        width: 300px;
-        height: 450px;
-    }
-
-    .home-logo-container {
-        margin-right: 10px;
-    }
-}
-
-
-

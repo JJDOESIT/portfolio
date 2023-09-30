@@ -1,14 +1,15 @@
 import "../styles/navbar.css";
+import "../styles/keyframes.css";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function Navbar() {
   const [active, setActive] = useState("");
-  const [changed, setChanged] = useState(true);
   const navigate = useNavigate();
 
+  /* Check if the URL contains a keyword, if it does, set it to active */
   useEffect(() => {
-    if (changed) {
+    setInterval(() => {
       if (window.location.href.includes("about")) {
         setActive("about");
       } else if (window.location.href.includes("portfolio")) {
@@ -18,9 +19,8 @@ export default function Navbar() {
       } else {
         setActive("");
       }
-      setChanged(false);
-    }
-  }, [changed]);
+    }, 100);
+  }, []);
 
   return (
     <>
@@ -29,7 +29,6 @@ export default function Navbar() {
           <div>
             <p
               onClick={() => {
-                setChanged(true);
                 navigate("/");
               }}
             >
@@ -52,7 +51,6 @@ export default function Navbar() {
               <p
                 className={active === "portfolio" ? "active" : ""}
                 onClick={() => {
-                  setChanged(true);
                   navigate("/portfolio/");
                 }}
               >
@@ -63,7 +61,6 @@ export default function Navbar() {
               <p
                 className={active === "contact" ? "active" : ""}
                 onClick={() => {
-                  setChanged(true);
                   navigate("/contact/");
                 }}
               >
@@ -72,7 +69,11 @@ export default function Navbar() {
             </li>
           </ul>
           <div className="github-logo">
-            <a href="https://github.com/JJDOESIT/">
+            <a
+              href="https://github.com/JJDOESIT/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <img
                 src={require("../pictures/github-mark-white.png")}
                 alt="Github"

@@ -1,28 +1,43 @@
+/* Navbar */
 .navbar{
     display: flex;
     width: 100%;
     height: 50px;
-    background-color: #232323;
+    background-color: rgb(36,36,36);
     box-shadow: 0 2px 1px #1e1e1e;
     padding: 10px 5px 10px 5px;
 }
 
+/* Navbar Container */
 .navbar-container{
     display: flex;
     flex-direction: row;
     width: 100%;
     justify-content: space-evenly;
-    transform: translateY(-200px);
-    animation-name: slide-down-intro;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
 }
 
+.navbar-container > :first-child, .navbar-container > :last-child{
+    transform: translateY(-200px);
+    animation: slide-down-intro 1s forwards;
+}
+
+/* Target all p elements and change font */
+.navbar-container p{
+    font-family: 'Montserrat',sans-serif;
+}
+
+/* Target all p elements on hover and change cursor */
+.navbar-container p:hover{
+    cursor: pointer;
+}
+
+/* Target all div elements and set them to flex-box and center their elements */
 .navbar-container div{
     display: flex;
     align-items: center;
 }
 
+/* Target the unordered list that holds the links */
 .navbar-container > ul{
     display: flex;
     flex-direction: row;
@@ -31,37 +46,43 @@
     justify-content: space-evenly;
 }
 
+/* Target the list elements */
 .navbar-container > ul > li{
     display: flex;
     align-items: center;
     list-style: none;
     padding: 5px;
-    animation-name: bounce;
-    animation-duration: 0.5s;
 }
 
 .navbar-container > ul > li:nth-child(1){
-    animation-delay: 0.4s;
+    opacity: 0;
+    animation: fade-in-down 2s forwards;
 }
 
-
+/* Delay the second link by 0.25s */
 .navbar-container > ul > li:nth-child(2){
-    animation-delay: 0.65s;
+    opacity: 0;
+    animation: fade-in-down 2s 0.25s forwards;
 }
 
+/* Delay the third link by 0.5s */
 .navbar-container > ul > li:nth-child(3){
-    animation-delay: 0.9s;
+    opacity: 0;
+    animation: fade-in-down 2s 0.5s forwards;
 }
 
+/* Set the home link color to white and increase size */
 .navbar-container > div:first-child > p{
     color: rgb(255, 255, 255);
     font-size: 1.5rem;
 }
 
+/* Scale by 1.1 when hovering over home link */
 .navbar-container > div:first-child > p:hover{
     transform: scale(1.1);
 }
 
+/* Target all p elements in the links list */
 .navbar-container > ul > li > p{
     position: relative;
     color: white;
@@ -69,78 +90,51 @@
     font-size: 1.25rem;
 }
 
+/* When the link is active, set its opacity to 1 */
 .navbar-container > ul > li > .active{
     opacity: 1;
 }
 
+/* When the link is not active, but being hovered over, set it's opacity to 0.8 */
 .navbar-container > ul > li > p:not(.active):hover{
     opacity: 0.8;
 }
 
+/* Underline under the currently active link */
 .navbar-container > ul > li > .active::after{
     content: "";
     position: absolute;
     width: 100%;
     height: 4px;
-    background-color: rgb(152, 223, 238);
+    background-color: rgb(255, 210, 0);
     border-radius: 3rem;
     bottom: -5px;
     left: 0;
 }
 
+/* Target github logo */
 .github-logo > a > img{
     display: flex;
     width: 25px;
     height: 25px;
 }
 
-@keyframes slide-down-intro{
-    100% {
-        transform: translateY(0);
-    }
-}
-
-@keyframes bounce{
-    0% {
-        transform: translateY(-3px);
-    }
-    10% {
-        transform: translateY(-6px);
-    }
-    20% {
-        transform: translateY(-9px);
-    }
-    30% {
-        transform: translateY(-12px);
-    }
-    40% {
-        transform: translateY(-15px);
-    }
-    50% {
-        transform: translateY(-15px);
-    }
-    60% {
-        transform: translateY(-12px);
-    }
-    70% {
-        transform: translateY(-9px);
-    }
-    80% {
-        transform: translateY(-6px);
-    }
-    90% {
-        transform: translateY(-3px);
-    }
-    100% {
-        transform: translateY(0px);
-    }
-}
-
+/* Target 610px */
 @media (max-width: 610px){
     .navbar-container > ul > li > p{
         font-size: 0.75rem;
     }
     .navbar-container > div:first-child > p{
         font-size: 1rem;
+    }
+}
+
+/* Target 250px */
+@media (max-width: 250px){
+    .navbar-container > ul > li > p{
+        font-size: 0.6rem;
+    }
+    .navbar-container > div:first-child > p{
+        font-size: 0.9rem;
     }
 }

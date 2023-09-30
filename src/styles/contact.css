@@ -1,0 +1,149 @@
+/* Contact page container */
+.contact-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: calc(100% - 70px);
+    overflow-y: scroll;
+    align-items: center;
+}
+
+/* Target the title */
+.contact-title-container{
+    text-align: center;
+    height: fit-content;
+    width: 100%;
+}
+
+/* Target the first title */
+.contact-title-container > :nth-child(1){
+    padding: 20px 10px 5px 10px;
+    font-size: max(3rem, 5vw);
+    font-weight: bold;
+    color: white;
+}
+
+/* Target the second title */
+.contact-title-container > :nth-child(2){
+    padding: 5px 10px 20px 10px;
+    font-size: max(1.5rem, 2vw);
+    color: rgb(180, 180, 180);
+}
+
+/* Target form container */
+.contact-form-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 20px;
+    width: max(12rem, 40vw);
+}
+
+/* Target all divs except the alert container */
+.contact-form-container > div:not(.alert-container){
+    padding: 10px 0 10px 0;
+    width: 100%;
+}
+
+/* Target all inputs and text area except the submit button */
+.contact-form-container > div:not(:last-child) > input, .contact-form-container > div > textarea{
+    background: none;
+    background-image: linear-gradient(rgb(36,36,36), rgb(36,36,36)), linear-gradient(45deg, rgb(192, 164, 42), rgb(64, 64, 64) 0%); 
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+    border-radius: 0.5em;
+    border: 4px solid transparent;
+    padding: 20px;
+    color: white;
+    outline-style: none;
+    font-size: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Target first input */
+.contact-form-container > :nth-child(1){
+    opacity: 0;
+    animation: fade-in-right 1s forwards;
+}
+
+/* Target second input */
+.contact-form-container > :nth-child(2){
+    opacity: 0;
+    animation: fade-in-left 1s 0.25s forwards;
+}
+
+/* Target thrid input */
+.contact-form-container > :nth-child(3){
+    opacity: 0;
+    animation: fade-in-right 1s 0.5s forwards;
+}
+
+/* Target last input */
+.contact-form-container > :last-child{
+    opacity: 0;
+    animation: fade-in-left 1s 0.75s forwards;
+}
+
+/* Targte text area */
+.contact-form-container > :nth-child(3) > textarea{
+    height: max(5rem, 25vh);
+    resize: none;
+}
+
+/* Target last div */
+.contact-form-container > :last-child{
+    display: flex;
+    justify-content: center;
+}
+
+/* Target last input */
+.contact-form-container > :last-child > button{
+    background: transparent;
+    border-color: gold;
+    border-style: solid;
+    padding: 10px 30px 10px 30px;
+    font-size: 1.25rem;
+    color: white;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    font-weight: bold;
+}
+
+/* Target last input */
+.contact-form-container > :last-child > button::before{
+    content: '';
+    width: 0;
+    height: 300%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    background: linear-gradient(rgb(218 191 49), rgb(113 120 12));
+    transition: .5s ease;
+    z-index: -1;
+}
+
+/* Target last input on hover */
+.contact-form-container > :last-child > button:hover::before{
+    width: 100%;
+}
+
+/* Target last input on hover */
+.contact-form-container > :last-child > button:hover{
+    cursor: pointer;
+}
+
+/* 550px */
+@media (max-width: 550px){
+    .contact-title-container > :nth-child(1){
+        font-size: max(2rem, 7vw);
+    }
+    .contact-title-container > :nth-child(2){
+        font-size: max(1rem, 3vw);
+    }
+    .contact-form-container{
+        width: max(12rem, 60vw);
+    }
+}

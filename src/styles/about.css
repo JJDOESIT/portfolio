@@ -1,0 +1,117 @@
+.about-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: calc(100% - 70px);
+    overflow-y: scroll;
+    align-items: center;
+}
+
+.about-title-container{
+    display: flex;
+    width: 80vw;
+    height: fit-content;
+    min-height: 250px;
+    background-color: rgb(50,50,50);
+    border: 1px solid rgb(63, 63, 63);
+    border-radius: 2rem;
+    margin-top: 20px;
+    padding: 50px;
+    margin-bottom: 20px;
+    
+}
+
+.about-image-container{
+    display: flex;
+    position: relative;
+    width: 30%;
+    min-width: 250px;
+    opacity: 0;
+    animation: short-fade-in-down 1.25s 0.25s forwards;
+}
+
+.about-image-container > img{
+    z-index: 2;
+    border-radius: 0.5rem;
+    width: 100%;
+    height: 100%;
+}
+
+.about-image-container > :nth-child(2){
+    display: flex;
+    position: absolute;
+    background-color: rgb(185, 176, 67);
+    width: 100%;
+    height: 100%;
+    left: -5%;
+    bottom: -5%;
+    z-index: 1;
+}
+
+.about-text-container{
+    width: 70%;
+    height: 100%;
+    max-height: max(250px * 1.33, calc(80vw * 0.3) * 1.33);
+    margin-left: 50px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+.about-text-container::-webkit-scrollbar{
+    width: 0;
+    height: 0;
+}
+
+.about-text-container > p{
+    color: rgb(200, 200, 200);
+    font-size: max(1rem, 1.75vw);
+    opacity: 0;
+}
+
+.about-text-container > :nth-child(3){
+    animation: fade-in-left 1s 0.25s forwards;
+}
+
+.about-text-container > :nth-child(5){
+    animation: fade-in-left 1s 0.5s forwards;
+}
+
+.about-text-container > :first-child{
+    color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    animation: fade-in-right 1s 0.25s forwards;
+}
+
+.about-text-container > :first-child::after{
+    content: " ";
+    background-color: gold;
+    margin-left: 10px;
+    width: 50%;
+    max-width: 200px;
+    height: 3px;
+    border-radius: 3rem;
+}
+
+@media (max-width: 660px){
+    .about-title-container{
+        flex-direction: column;
+        align-items: center;
+        width: 80vw;
+        min-width: 275px;
+        height: fit-content;
+        min-height: fit-content;
+        padding: 20px;
+    }
+
+    .about-image-container{
+        width: 80%;
+    }
+    .about-text-container{
+        margin-top: 50px;
+        width: 100%;
+        max-height: fit-content;
+        margin-left: 0;
+        overflow-y: visible;
+    }
+}

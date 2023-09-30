@@ -1,0 +1,127 @@
+/* Blinking cursor */
+@keyframes cursor-blink{
+    100% {
+        border: none;
+    }
+}
+
+/* Fade in right */
+@keyframes fade-in-right{
+    0% {
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Fade in up */
+@keyframes fade-in-up{
+    0% {
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);  
+    }
+}
+
+/* Fade in left */
+@keyframes fade-in-left{
+    0% {
+        transform: translateX(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);  
+    }
+}
+
+/* Fade in down */
+@keyframes fade-in-down{
+    0% {
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);  
+    }
+}
+
+/* Short fade in down */
+@keyframes short-fade-in-down{
+    0% {
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);  
+    }
+}
+
+
+/* Fade in down for portfolio page */
+@keyframes portfolio-fade-in-down {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Fade in up for portfolio page */
+@keyframes portfolio-fade-in-up {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }  
+}
+
+/* Move down */
+@keyframes slide-down-intro{
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Wave animation */
+@keyframes wave-animate {
+	0%,
+	100% {
+		clip-path: polygon(
+			0% 45%,
+			16% 44%,
+			33% 50%,
+			54% 60%,
+			70% 61%,
+			84% 59%,
+			100% 52%,
+			100% 100%,
+			0% 100%
+		);
+	}
+
+	50% {
+		clip-path: polygon(
+			0% 60%,
+			15% 65%,
+			34% 66%,
+			51% 62%,
+			67% 50%,
+			84% 45%,
+			100% 46%,
+			100% 100%,
+			0% 100%
+		);
+	}
+}
