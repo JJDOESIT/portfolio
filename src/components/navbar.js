@@ -12,8 +12,8 @@ export default function Navbar() {
     setInterval(() => {
       if (window.location.href.includes("about")) {
         setActive("about");
-      } else if (window.location.href.includes("portfolio")) {
-        setActive("portfolio");
+      } else if (window.location.href.includes("projects")) {
+        setActive("projects");
       } else if (window.location.href.includes("contact")) {
         setActive("contact");
       } else {
@@ -49,9 +49,9 @@ export default function Navbar() {
             </li>
             <li>
               <p
-                className={active === "portfolio" ? "active" : ""}
+                className={active === "projects" ? "active" : ""}
                 onClick={() => {
-                  navigate("/portfolio/");
+                  navigate("/projects/");
                 }}
               >
                 Portfolio
