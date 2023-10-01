@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { RouterProvider, createHashRouter } from "react-router-dom";
 import Home from "./pages/home";
 import Portfolio from "./pages/portfolio";
 import Navbar from "./components/navbar";
@@ -8,9 +8,9 @@ import Contact from "./pages/contact";
 import About from "./pages/about";
 import "./styles/index.css";
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
-    path: "portfolio/",
+    path: "/",
     element: (
       <>
         <Navbar></Navbar>
