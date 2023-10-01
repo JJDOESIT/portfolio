@@ -1,3 +1,4 @@
+/* Target the about page */
 .about-container{
     display: flex;
     flex-direction: column;
@@ -8,6 +9,7 @@
     overflow-x: hidden;
 }
 
+/* Target the title container */
 .about-title-container{
     display: flex;
     width: 80vw;
@@ -19,6 +21,7 @@
     margin-bottom: 20px;
 }
 
+/* Target the image container */
 .about-image-container{
     display: flex;
     position: relative;
@@ -27,10 +30,10 @@
     height: calc(20vw * 1.33);
     min-height: 333px;
     opacity: 0;
-    animation: short-fade-in-down 1.25s 0.25s forwards;
-
+    animation: opacity-fade-in 1s ease-in 0.25s forwards;
 }
 
+/* Target the image in image container */
 .about-image-container > img{
     z-index: 2;
     border-radius: 0.5rem;
@@ -38,6 +41,7 @@
     height: 100%;
 }
 
+/* Target second child in image container */
 .about-image-container > :nth-child(2){
     display: flex;
     position: absolute;
@@ -49,6 +53,7 @@
     z-index: 1;
 }
 
+/* Target text container */
 .about-text-container{
     width: 70%;
     height: 100%;
@@ -60,25 +65,30 @@
     scrollbar-width: 2px;
 }
 
+/* Target scroll bar */
 .about-text-container::-webkit-scrollbar{
     background-color: rgb(255, 255, 255);
     width: 2px;
 }
 
+/* Target all p childs in text container */
 .about-text-container > p{
     color: rgb(200, 200, 200);
     font-size: max(1rem, 1.75vw);
     opacity: 0;
 }
 
+/* Target third child */
 .about-text-container > :nth-child(3){
     animation: fade-in-left 1s 0.25s forwards;
 }
 
+/* Target 5th child */
 .about-text-container > :nth-child(5){
     animation: fade-in-left 1s 0.5s forwards;
 }
 
+/* Target first child in text container */
 .about-text-container > :first-child{
     color: rgb(255, 255, 255);
     display: flex;
@@ -86,6 +96,7 @@
     animation: fade-in-right 1s 0.25s forwards;
 }
 
+/* Target the first child after element in text container */
 .about-text-container > :first-child::after{
     content: " ";
     background-color: gold;
@@ -96,6 +107,7 @@
     border-radius: 3rem;
 }
 
+/* 660px */
 @media (max-width: 660px){
     .about-title-container{
         flex-direction: column;

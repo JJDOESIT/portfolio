@@ -60,7 +60,6 @@
     }
 }
 
-
 /* Fade in down for portfolio page */
 @keyframes portfolio-fade-in-down {
     0% {
@@ -74,12 +73,12 @@
     }
 }
 
+/* Fade in opacity */
 @keyframes opacity-fade-in{
     100% {
         opacity: 1;
     }
 }
-
 
 /* Fade in up for portfolio page */
 @keyframes portfolio-fade-in-up {

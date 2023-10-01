@@ -5,6 +5,7 @@ export default function Skills() {
   const [skillsData, setSkillsData] = useState([]);
   const [type, setType] = useState("languages");
 
+  /* Set languages and tools data */
   useEffect(() => {
     if (type === "languages") {
       setSkillsData([
@@ -85,6 +86,7 @@ export default function Skills() {
               <div className="skills-image">
                 <img
                   src={require("../pictures/skills/" + data.image + ".png")}
+                  alt="logo"
                 ></img>
               </div>
               <div className="skills-text">
