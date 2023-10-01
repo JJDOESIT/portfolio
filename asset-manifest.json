@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/my-app/static/css/main.62b88426.css",
+    "main.js": "/my-app/static/js/main.4e458313.js",
+    "static/media/headshot.png": "/my-app/static/media/headshot.c81ce7a614146e3adf4f.png",
+    "static/media/headshot-about.png": "/my-app/static/media/headshot-about.5424a534d8a1df3ed516.png",
+    "static/media/btsea1.png": "/my-app/static/media/btsea1.c4c6b1df88db74f9a3df.png",
+    "static/media/maze1.png": "/my-app/static/media/maze1.4be9f7ff2d2282784f75.png",
+    "index.html": "/my-app/index.html",
+    "main.62b88426.css.map": "/my-app/static/css/main.62b88426.css.map",
+    "main.4e458313.js.map": "/my-app/static/js/main.4e458313.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.62b88426.css",
+    "static/js/main.4e458313.js"
+  ]
+}
