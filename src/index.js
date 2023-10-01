@@ -10,7 +10,7 @@ import "./styles/index.css";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "portfolio/",
     element: (
       <>
         <Navbar></Navbar>
