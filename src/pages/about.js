@@ -1,4 +1,5 @@
 import "../styles/about.css";
+import Skills from "../components/skills";
 
 export default function About() {
   return (
@@ -30,6 +31,7 @@ export default function About() {
           </p>
         </div>
       </div>
+      <Skills></Skills>
     </div>
   );
 }
