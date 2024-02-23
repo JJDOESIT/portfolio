@@ -9,12 +9,20 @@ export default function Portfolio() {
   useEffect(() => {
     setPortfolioData([
       {
+        image: "chess1",
+        title: "Chess Engine",
+        description:
+          "Mailbox style chess engine incorporated with a playable AI, special moves, and a GUI.",
+        link: "https://github.com/JJDOESIT/chess",
+        id: 0,
+      },
+      {
         image: "btsea1",
         title: "BTSea",
         description:
           "Fully functional Bitcoin wallet equipped with many features operating on the Testnet network.",
         link: "https://github.com/JJDOESIT/btsea",
-        id: 0,
+        id: 1,
       },
       {
         image: "maze1",
@@ -22,7 +30,7 @@ export default function Portfolio() {
         description:
           "Pathfinding benchmarking tool that encompasses four different algorithms and a functional GUI.",
         link: "https://github.com/JJDOESIT/mazev2",
-        id: 1,
+        id: 2,
       },
     ]);
   }, []);
