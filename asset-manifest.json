@@ -1,22 +1,23 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.44706ea6.css",
-    "main.js": "/portfolio/static/js/main.0236e591.js",
+    "main.js": "/portfolio/static/js/main.d879d378.js",
     "static/media/headshot.png": "/portfolio/static/media/headshot.c81ce7a614146e3adf4f.png",
     "static/media/headshot-about.png": "/portfolio/static/media/headshot-about.5424a534d8a1df3ed516.png",
     "static/media/btsea1.png": "/portfolio/static/media/btsea1.c4c6b1df88db74f9a3df.png",
     "static/media/react-icon.png": "/portfolio/static/media/react-icon.8a6fc0a24a800d1e0f4a.png",
     "static/media/python-icon.png": "/portfolio/static/media/python-icon.82efb64f8698a267f8bf.png",
     "static/media/django-icon.png": "/portfolio/static/media/django-icon.e2d0ed2e07fbbc1c4dd9.png",
+    "static/media/chess1.png": "/portfolio/static/media/chess1.903ea5b9a1e2ff7c74c8.png",
     "static/media/cplusplus-icon.png": "/portfolio/static/media/cplusplus-icon.24a8f93854ab092f17a7.png",
     "static/media/maze1.png": "/portfolio/static/media/maze1.4be9f7ff2d2282784f75.png",
     "static/media/html-icon.png": "/portfolio/static/media/html-icon.ff3cf75e3b7cbb4ea77c.png",
     "index.html": "/portfolio/index.html",
     "main.44706ea6.css.map": "/portfolio/static/css/main.44706ea6.css.map",
-    "main.0236e591.js.map": "/portfolio/static/js/main.0236e591.js.map"
+    "main.d879d378.js.map": "/portfolio/static/js/main.d879d378.js.map"
   },
   "entrypoints": [
     "static/css/main.44706ea6.css",
-    "static/js/main.0236e591.js"
+    "static/js/main.d879d378.js"
   ]
 }
