@@ -1,0 +1,37 @@
+{
+    "projects": [
+    {
+      "image": "/portfolio/images/projects/chess1.png",
+      "title": "Chess Engine",
+      "description":
+        "Mailbox style chess engine incorporated with a playable AI, special moves, and a GUI.",
+      "link": "https://github.com/JJDOESIT/chess",
+      "id": 0
+    },
+    {
+      "image": "/portfolio/images/projects/btsea1.png",
+      "title": "BTSea",
+      "description":
+        "Fully functional Bitcoin wallet equipped with many features operating on the Testnet network.",
+      "link": "https://github.com/JJDOESIT/btsea",
+      "id": 1
+    },
+    {
+      "image": "/portfolio/images/projects/maze1.png",
+      "title": "Maze Visualization",
+      "description":
+        "Pathfinding benchmarking tool that encompasses four different algorithms and a functional GUI.",
+      "link": "https://github.com/JJDOESIT/mazev2",
+      "id": 2
+    },
+    {
+      "image": "/portfolio/images/projects/pacman1.png",
+      "title": "Pacman",
+      "description":
+        "Pacman clone with map and configuration editors for enhanced customization.",
+        "id": 3
+    }
+  ],
+    
+    "link-icon": "/portfolio/images/projects/link-icon.png"
+}

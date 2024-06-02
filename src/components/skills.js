@@ -1,56 +1,27 @@
 import "../styles/skills.css";
+import imagesJSON from "../json/skills.json";
 import { useState, useEffect } from "react";
 
 export default function Skills() {
-  const [skillsData, setSkillsData] = useState([]);
   const [type, setType] = useState("languages");
 
-  /* Set languages and tools data */
+  const [imageDict, setImageDict] = useState({});
+  const [imagesLoaded, setImagesLoaded] = useState(false);
+
+  // Determine whether the image paths have been loaded into the image dict
   useEffect(() => {
-    if (type === "languages") {
-      setSkillsData([
-        {
-          image: "python-icon",
-          text: "Python",
-        },
-        {
-          image: "cplusplus-icon",
-          text: "C++",
-        },
-        {
-          image: "js-icon",
-          text: "Javascript",
-        },
-        {
-          image: "html-icon",
-          text: "HTML",
-        },
-        {
-          image: "css-icon",
-          text: "CSS",
-        },
-      ]);
-    } else if (type === "tools") {
-      setSkillsData([
-        {
-          image: "react-icon",
-          text: "React",
-        },
-        {
-          image: "django-icon",
-          text: "Django",
-        },
-        {
-          image: "rest-icon",
-          text: "REST",
-        },
-        {
-          image: "github-icon",
-          text: "Github",
-        },
-      ]);
+    if (Object.keys(imageDict).length > 0) {
+      setImagesLoaded(true);
     }
-  }, [type]);
+  }, [imageDict]);
+
+  // Load an image map from the JSON file
+  useEffect(() => {
+    setImageDict(imagesJSON);
+  }, []);
+
+  /* Set languages and tools data */
+  useEffect(() => {}, [type]);
 
   return (
     <div className="skills-container">
@@ -80,21 +51,19 @@ export default function Skills() {
         </div>
       </div>
       <div className="skills-grid-container">
-        {skillsData.map((data) => {
-          return (
-            <div className="skills-card-container">
-              <div className="skills-image">
-                <img
-                  src={require("../pictures/skills/" + data.image + ".png")}
-                  alt="logo"
-                ></img>
+        {imagesLoaded &&
+          imageDict[type].map((data) => {
+            return (
+              <div className="skills-card-container">
+                <div className="skills-image">
+                  <img src={data.url} alt="logo"></img>
+                </div>
+                <div className="skills-text">
+                  <p>{data.text}</p>
+                </div>
               </div>
-              <div className="skills-text">
-                <p>{data.text}</p>
-              </div>
-            </div>
-          );
-        })}
+            );
+          })}
       </div>
     </div>
   );

@@ -1,11 +1,27 @@
 import "../styles/navbar.css";
 import "../styles/keyframes.css";
+import imagesJSON from "../json/navbar.json";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function Navbar() {
   const [active, setActive] = useState("");
   const navigate = useNavigate();
+
+  const [imageDict, setImageDict] = useState({});
+  const [imagesLoaded, setImagesLoaded] = useState(false);
+
+  // Determine whether the image paths have been loaded into the image dict
+  useEffect(() => {
+    if (Object.keys(imageDict).length > 0) {
+      setImagesLoaded(true);
+    }
+  }, [imageDict]);
+
+  // Load an image map from the JSON file
+  useEffect(() => {
+    setImageDict(imagesJSON);
+  }, []);
 
   /* Check if the URL contains a keyword, if it does, set it to active */
   useEffect(() => {
@@ -74,10 +90,12 @@ export default function Navbar() {
               target="_blank"
               rel="noreferrer"
             >
-              <img
-                src={require("../pictures/github-mark-white.png")}
-                alt="Github"
-              ></img>
+              {imagesLoaded && (
+                <img
+                  src={imageDict["mainImagePaths"]["github-logo"]}
+                  alt="Github"
+                ></img>
+              )}
             </a>
           </div>
         </div>

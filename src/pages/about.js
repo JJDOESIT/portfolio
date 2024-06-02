@@ -1,15 +1,34 @@
 import "../styles/about.css";
+import imagesJSON from "../json/about.json";
 import Skills from "../components/skills";
+import { useState, useEffect } from "react";
 
 export default function About() {
+  const [imageDict, setImageDict] = useState({});
+  const [imagesLoaded, setImagesLoaded] = useState(false);
+
+  // Determine whether the image paths have been loaded into the image dict
+  useEffect(() => {
+    if (Object.keys(imageDict).length > 0) {
+      setImagesLoaded(true);
+    }
+  }, [imageDict]);
+
+  // Load an image map from the JSON file
+  useEffect(() => {
+    setImageDict(imagesJSON);
+  }, []);
+
   return (
     <div className="about-container">
       <div className="about-title-container">
         <div className="about-image-container">
-          <img
-            src={require("../pictures/headshot-about.png")}
-            alt="headshot"
-          ></img>
+          {imagesLoaded && (
+            <img
+              src={imageDict["mainImagePaths"]["headshot"]}
+              alt="headshot"
+            ></img>
+          )}
           <div></div>
         </div>
         <div className="about-text-container">

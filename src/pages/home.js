@@ -1,6 +1,6 @@
 import "../styles/home.css";
 import "../styles/keyframes.css";
-import React from "react";
+import imagesJSON from "../json/home.json";
 import { useState, useEffect } from "react";
 import typingLetters from "../functions/typingLetters";
 import randomQuote from "../functions/randomQuote";
@@ -8,15 +8,35 @@ import ConfettiExplosion from "react-confetti-explosion";
 import { useNavigate } from "react-router-dom";
 
 export default function Home() {
+  // The length of the current dynamic text
   const [introTypeCount, setIntroTypeCount] = useState(0);
+  // The current dynamic text string (ie. "I'm a soft" )
   const [introText, setIntroText] = useState(" ");
+  // The current quote (ie. Dict containing 'Quote' and 'Author' keys)
   const [quote, setQuote] = useState({});
-  const [isExploding, setIsExploding] = React.useState(false);
+  // Boolean flag whether the confetti animation is playing
+  const [isExploding, setIsExploding] = useState(false);
+
+  const [imageDict, setImageDict] = useState({});
+  const [imagesLoaded, setImagesLoaded] = useState(false);
+
   const navigate = useNavigate();
 
   //Random quotes
   useEffect(() => {
     randomQuote(100, 140, setQuote);
+  }, []);
+
+  // Determine whether the image paths have been loaded into the image dict
+  useEffect(() => {
+    if (Object.keys(imageDict).length > 0) {
+      setImagesLoaded(true);
+    }
+  }, [imageDict]);
+
+  // Load an image map from the JSON file
+  useEffect(() => {
+    setImageDict(imagesJSON);
   }, []);
 
   //Explosion effect
@@ -86,7 +106,12 @@ export default function Home() {
           </div>
         </div>
         <div className="home-image-container">
-          <img src={require("../pictures/headshot.png")} alt="Icon"></img>
+          {imagesLoaded && (
+            <img
+              src={imageDict["mainImagePaths"]["goldenGateBridge"]}
+              alt="Icon"
+            ></img>
+          )}
           <div></div>
           <div>
             <div>

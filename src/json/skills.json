@@ -1,0 +1,15 @@
+{
+    "tools": [
+            {"url":"/portfolio/images/skills/django-icon.png", "text": "DJANGO"},
+            {"url":"/portfolio/images/skills/github-icon.png", "text": "Github"},
+            {"url":"/portfolio/images/skills/react-icon.png", "text": "React"},
+            {"url": "/portfolio/images/skills/rest-icon.png", "text": "REST"}
+    ],
+    "languages": [
+            {"url": "/portfolio/images/skills/cplusplus-icon.png","text": "C++"},  
+            {"url": "/portfolio/images/skills/python-icon.png", "text": "Python"},
+            {"url": "/portfolio/images/skills/js-icon.png", "text": "Javascript"},
+            {"url": "/portfolio/images/skills/html-icon.png","text": "HTML"},
+            {"url":"/portfolio/images/skills/css-icon.png", "text": "CSS"}
+    ]
+}
