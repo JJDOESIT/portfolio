@@ -1,7 +1,7 @@
 {
     "projects": [
     {
-      "image": "/portfolio/images/projects/chess1.png",
+      "image": "/portfolio/images/projects/chess1.pn",
       "title": "Chess Engine",
       "description":
         "Mailbox style chess engine incorporated with a playable AI, special moves, and a GUI.",
