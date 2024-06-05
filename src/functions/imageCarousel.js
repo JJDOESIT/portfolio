@@ -24,12 +24,20 @@ export default function imageCarousel(
   // image two's image
   var load = () => {
     if (imageList.length === 2) {
+      console.log(
+        "2",
+        imageList.length,
+        fadingInImage,
+        fadingOutImage,
+        imageList
+      );
       fadingOutImage = (fadingOutImage + 1) % imageList.length;
       fadingInImage = (fadingInImage + 1) % imageList.length;
     } else {
       fadingOutImage = fadingInImage;
       fadingInImage = (fadingInImage + 2) % imageList.length;
     }
+
     imageOne.style.setProperty("opacity", "1", "important");
     setTimeout(() => {
       imageTwo.style.setProperty("opacity", "0", "important");

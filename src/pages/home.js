@@ -80,8 +80,8 @@ export default function Home() {
       const outClassName = "home-image-carousel-left-out";
       const inClassName = "home-image-carousel-left-in";
       const imageList = [
-        imageDict["mainImagePaths"]["goldenGateBridge"],
         imageDict["mainImagePaths"]["lake"],
+        imageDict["mainImagePaths"]["goldenGateBridge"], // Input list must match the src originally set in the HTML
         imageDict["mainImagePaths"]["hiking"],
       ];
       const imageDisplayTime = 5000;
