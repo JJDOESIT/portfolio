@@ -65,6 +65,7 @@
     animation: fade-in-right 1s 1.5s forwards;
 }
 
+/* Target the contact button container */
 .contact-button-container{
     padding: 30px;
 }
@@ -134,16 +135,38 @@
     margin-bottom: 50px;
 }
 
-/* Target the image in the home image container */
+/* Target all direct images in the home image container */
 .home-image-container > img{
     z-index: 2;
     border-radius: 0.5rem;
+    max-height: 500px;
     width: 100%;
     height: 100%;
 }
 
+/* Target the first image in the home image container */
+.home-image-one{
+    opacity: 1;
+}
+
+/* Target the second image in the home image container */
+.home-image-two{
+    position: absolute;
+    opacity: 0;
+}
+
+/* An animation to add to the home image carousel */
+.home-image-carousel-left-out{
+    animation: carousel-left-out 1s 0s forwards linear;
+}
+
+/* An animation to add to the home image carousel */
+.home-image-carousel-left-in{
+    animation: carousel-left-in 1s 0s forwards linear;
+}
+
 /* Create the offset background behind the image */
-.home-image-container > :nth-child(2){
+.home-image-background{
     display: flex;
     position: absolute;
     width: 100%;
@@ -155,7 +178,7 @@
 }
 
 /* Create the text box in front of the image */
-.home-image-container > :nth-child(3){
+.home-image-text-container{
     display: flex;
     align-items: center;
     position: absolute;
@@ -178,13 +201,13 @@
     top: 50%;
 }
 
-/* Target text box */
-.home-image-container > :nth-child(3)::-webkit-scrollbar{
+/* Target the image text box */
+.home-image-text-container::-webkit-scrollbar{
     display: none;
 }
 
-/* Target the text box */
-.home-image-container > :nth-child(3) > div{
+/* Target the image text box */
+.home-image-text-container{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -193,8 +216,8 @@
 
 }
 
-/* Target the text box */
-.home-image-container > :nth-child(3) p{
+/* Target all p elements in the the image text box */
+.home-image-text-container p{
     font-size: 15px;
     color: rgb(255, 255, 255);
 }
@@ -212,8 +235,10 @@
 
 /* 550px */
 @media (max-width: 680px){
-    .home-image-container > :nth-child(3){
+    .home-image-text-container{
         left: 0;
+        width: calc(100% - 20px);
+        padding: 10;
     }
 
 }

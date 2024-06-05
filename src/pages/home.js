@@ -6,6 +6,7 @@ import typingLetters from "../functions/typingLetters";
 import randomQuote from "../functions/randomQuote";
 import ConfettiExplosion from "react-confetti-explosion";
 import { useNavigate } from "react-router-dom";
+import imageCarousel from "../functions/imageCarousel";
 
 export default function Home() {
   // The length of the current dynamic text
@@ -71,6 +72,35 @@ export default function Home() {
     );
   }, [introTypeCount]);
 
+  // Carousel image effect
+  useEffect(() => {
+    if (imagesLoaded) {
+      const imageClassNameOne = ".home-image-one";
+      const imageClassNameTwo = ".home-image-two";
+      const outClassName = "home-image-carousel-left-out";
+      const inClassName = "home-image-carousel-left-in";
+      const imageList = [
+        imageDict["mainImagePaths"]["goldenGateBridge"],
+        imageDict["mainImagePaths"]["lake"],
+        imageDict["mainImagePaths"]["hiking"],
+      ];
+      const imageDisplayTime = 5000;
+      const imageSwapDelay = 500;
+      var intervalID = imageCarousel(
+        imageClassNameOne,
+        imageClassNameTwo,
+        outClassName,
+        inClassName,
+        imageList,
+        imageDisplayTime,
+        imageSwapDelay
+      );
+    }
+    return () => {
+      clearInterval(intervalID);
+    };
+  }, [imagesLoaded, imageDict]);
+
   return (
     <>
       <div className="home-container">
@@ -107,22 +137,28 @@ export default function Home() {
         </div>
         <div className="home-image-container">
           {imagesLoaded && (
-            <img
-              src={imageDict["mainImagePaths"]["goldenGateBridge"]}
-              alt="Icon"
-            ></img>
+            <>
+              <img
+                src={imageDict["mainImagePaths"]["goldenGateBridge"]}
+                alt="Icon"
+                className="home-image-one"
+              ></img>
+              <img
+                src={imageDict["mainImagePaths"]["lake"]}
+                alt="Icon"
+                className="home-image-two"
+              ></img>
+            </>
           )}
-          <div></div>
-          <div>
-            <div>
-              <p>"{quote.quote}"</p>
-              <p>- {quote.author}</p>
-              {isExploding ? (
-                <ConfettiExplosion className="explosion-container"></ConfettiExplosion>
-              ) : (
-                ""
-              )}
-            </div>
+          <div className="home-image-background"></div>
+          <div className="home-image-text-container">
+            <p>"{quote.quote}"</p>
+            <p>- {quote.author}</p>
+            {isExploding ? (
+              <ConfettiExplosion className="explosion-container"></ConfettiExplosion>
+            ) : (
+              ""
+            )}
           </div>
         </div>
       </div>

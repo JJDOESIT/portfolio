@@ -54,7 +54,7 @@ export default function Skills() {
         {imagesLoaded &&
           imageDict[type].map((data) => {
             return (
-              <div className="skills-card-container">
+              <div className="skills-card-container" key={data.id}>
                 <div className="skills-image">
                   <img src={data.url} alt="logo"></img>
                 </div>
