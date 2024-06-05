@@ -13,10 +13,11 @@ export default function imageCarousel(
   var fadingInImage = 0;
   var imageOne = document.querySelector(imageClassNameOne);
   var imageTwo = document.querySelector(imageClassNameTwo);
-  var loadCount = 0;
+  var ready;
 
   // When image one is done loading, and is invisible, swap its image
   var animationend = () => {
+    ready = true;
     imageOne.src = imageList[fadingInImage];
   };
 
@@ -24,30 +25,21 @@ export default function imageCarousel(
   // and then set image one to visible, image two to hidden, and then swap
   // image two's image
   var load = () => {
-    if (loadCount === 0) {
-      loadCount += 1;
-    } else if (imageList.length === 2) {
-      console.log(
-        "2",
-        imageList.length,
-        fadingInImage,
-        fadingOutImage,
-        imageList
-      );
-      fadingOutImage = (fadingOutImage + 1) % imageList.length;
-      fadingInImage = (fadingInImage + 1) % imageList.length;
-    } else {
-      console.log("3 before", fadingInImage, fadingOutImage, imageList);
-      fadingOutImage = fadingInImage;
-      fadingInImage = (fadingInImage + 2) % imageList.length;
-      console.log("3 after", fadingInImage, fadingOutImage, imageList);
-    }
+    if (ready) {
+      if (imageList.length === 2) {
+        fadingOutImage = (fadingOutImage + 1) % imageList.length;
+        fadingInImage = (fadingInImage + 1) % imageList.length;
+      } else {
+        fadingOutImage = fadingInImage;
+        fadingInImage = (fadingInImage + 2) % imageList.length;
+      }
 
-    imageOne.style.setProperty("opacity", "1", "important");
-    setTimeout(() => {
-      imageTwo.style.setProperty("opacity", "0", "important");
-      imageTwo.src = imageList[fadingInImage];
-    }, imageSwapDelay);
+      imageOne.style.setProperty("opacity", "1", "important");
+      setTimeout(() => {
+        imageTwo.style.setProperty("opacity", "0", "important");
+        imageTwo.src = imageList[fadingInImage];
+      }, imageSwapDelay);
+    }
   };
 
   // Add event listeners to image one
