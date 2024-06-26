@@ -4,6 +4,7 @@ import imagesJSON from "../json/home.json";
 import { useState, useEffect } from "react";
 import typingLetters from "../functions/typingLetters";
 import randomQuote from "../functions/randomQuote";
+import randomQuoteLocal from "../functions/randomQuoteLocal";
 import ConfettiExplosion from "react-confetti-explosion";
 import { useNavigate } from "react-router-dom";
 import imageCarousel from "../functions/imageCarousel";
@@ -25,7 +26,9 @@ export default function Home() {
 
   //Random quotes
   useEffect(() => {
-    randomQuote(100, 140, setQuote);
+    //randomQuote(100, 140, setQuote);
+    const quote = randomQuoteLocal(100, 140);
+    setQuote(quote);
   }, []);
 
   // Determine whether the image paths have been loaded into the image dict
@@ -152,7 +155,7 @@ export default function Home() {
           )}
           <div className="home-image-background"></div>
           <div className="home-image-text-container">
-            <p>"{quote.quote}"</p>
+            <p>"{quote.content}"</p>
             <p>- {quote.author}</p>
             {isExploding ? (
               <ConfettiExplosion className="explosion-container"></ConfettiExplosion>
