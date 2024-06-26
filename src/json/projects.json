@@ -29,7 +29,8 @@
       "title": "Pacman",
       "description":
         "Pacman clone with map and configuration editors for enhanced customization.",
-        "id": 3
+      "link": "https://github.com/JJDOESIT/pacman",
+      "id": 3
     }
   ],
     
