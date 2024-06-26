@@ -35,7 +35,7 @@ export default function About() {
           <p>About Me</p>
           <br></br>
           <p>
-            &emsp;Hello! I'm James Gaboriault-Whitcomb, a freshman at Youngstown
+            &emsp;Hello! I'm James Gaboriault-Whitcomb, a sophmore at Youngstown
             State University. I'm pursuing a major in computer science, which is
             a subject I'm truly passionate about. My journey into coding began
             during high school, and since then, I've been continuously working

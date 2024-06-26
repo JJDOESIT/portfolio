@@ -27,8 +27,7 @@ export default function Home() {
   //Random quotes
   useEffect(() => {
     //randomQuote(100, 140, setQuote);
-    const quote = randomQuoteLocal(100, 140);
-    setQuote(quote);
+    setQuote(randomQuoteLocal(100, 140));
   }, []);
 
   // Determine whether the image paths have been loaded into the image dict
@@ -76,16 +75,16 @@ export default function Home() {
   }, [introTypeCount]);
 
   // Carousel image effect
-  useEffect(() => {
+  /* useEffect(() => {
     if (imagesLoaded) {
       const imageClassNameOne = ".home-image-one";
       const imageClassNameTwo = ".home-image-two";
       const outClassName = "home-image-carousel-left-out";
       const inClassName = "home-image-carousel-left-in";
       const imageList = [
+        imageDict["mainImagePaths"]["goldenGateBridge"],
+        imageDict["mainImagePaths"]["hiking"], // Input list must match the src originally set in the HTML
         imageDict["mainImagePaths"]["lake"],
-        imageDict["mainImagePaths"]["goldenGateBridge"], // Input list must match the src originally set in the HTML
-        imageDict["mainImagePaths"]["hiking"],
       ];
       const imageDisplayTime = 5000;
       const imageSwapDelay = 500;
@@ -102,7 +101,7 @@ export default function Home() {
     return () => {
       clearInterval(intervalID);
     };
-  }, [imagesLoaded, imageDict]);
+  }, [imagesLoaded, imageDict]); */
 
   return (
     <>
@@ -129,7 +128,8 @@ export default function Home() {
                 type="button"
                 onClick={() => {
                   if (!isExploding) {
-                    randomQuote(100, 140, setQuote);
+                    //randomQuote(100, 140, setQuote);
+                    setQuote(randomQuoteLocal(100, 140));
                     setIsExploding(true);
                   }
                 }}
@@ -142,12 +142,12 @@ export default function Home() {
           {imagesLoaded && (
             <>
               <img
-                src={imageDict["mainImagePaths"]["goldenGateBridge"]}
+                src={imageDict["mainImagePaths"]["hiking"]}
                 alt="Icon"
                 className="home-image-one"
               ></img>
               <img
-                src={imageDict["mainImagePaths"]["lake"]}
+                src={imageDict["mainImagePaths"]["goldenGateBridge"]}
                 alt="Icon"
                 className="home-image-two"
               ></img>

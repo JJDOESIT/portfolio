@@ -69,12 +69,12 @@
 
 /* Target all odd childs */
 .portfolio-grid > :nth-child(odd){
-    animation: portfolio-fade-in-down 1s;
+    animation: portfolio-fade-in-down 1500ms;
 }
 
 /* Target all even childs */
 .portfolio-grid > :nth-child(even){
-    animation: portfolio-fade-in-up 1s;
+    animation: portfolio-fade-in-up 1500ms;
 }
 
 /* Target all card images */

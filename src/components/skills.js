@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 
 export default function Skills() {
   const [type, setType] = useState("languages");
-
   const [imageDict, setImageDict] = useState({});
   const [imagesLoaded, setImagesLoaded] = useState(false);
 
@@ -19,9 +18,6 @@ export default function Skills() {
   useEffect(() => {
     setImageDict(imagesJSON);
   }, []);
-
-  /* Set languages and tools data */
-  useEffect(() => {}, [type]);
 
   return (
     <div className="skills-container">
