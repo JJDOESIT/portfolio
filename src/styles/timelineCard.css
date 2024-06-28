@@ -15,12 +15,12 @@
 
 /* Target the left aligned card text container */
 .timeline-card-text-container-left{
-    box-shadow: rgb(0, 0, 0) 10px 10px 10px;
+    box-shadow: rgb(0, 0, 0) 7px 7px 10px;
 }
 
 /* Target the right aligned card text container */
 .timeline-card-text-container-right{
-    box-shadow: rgb(0, 0, 0) -10px 10px 10px;
+    box-shadow: rgb(0, 0, 0) -7px 7px 10px;
 }
 
 /* Target the card title p tag */
@@ -42,6 +42,7 @@
 .timeline-card-image{
     height: 100%;
     width: 100%;
+    object-fit: cover;
     position: absolute;
     z-index: 1;
     border-radius: 0.5rem;

@@ -5,8 +5,8 @@ export default function TimelineCard(props) {
   const [pageLoaded, setPageLoaded] = useState(false);
   const [sizes, setSizes] = useState(null);
   const [seen, setSeen] = useState(false);
-  const cardSlideInDelay = 300; // in ms
-  const cardSeenOffset = 100; // in ms
+  const cardSlideInDelay = 100; // in ms
+  const cardSeenOffset = 0; // in px
   const gapBetweenCards = 10; // row gap between each card
   const timelineBarOffset = 50; // this number means each end of the bar will have 50 extra pixels
 
