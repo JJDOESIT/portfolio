@@ -100,6 +100,20 @@
     }
 }
 
+/* Slide in left */ 
+@keyframes work-slide-left {
+    100% {
+        transform: translateX(0);
+    } 
+}
+
+/* Slide in right */ 
+@keyframes work-slide-right {
+    100% {
+        transform: translateX(0);
+    } 
+}
+
 /* Carousel fade left out */
 @keyframes carousel-left-out{
     0% { 

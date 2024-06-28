@@ -1,0 +1,20 @@
+{
+    "timeline": [
+        {"alignment": "left", 
+        "imagePath": "/portfolio/images/timeline/ysu.png",
+        "date": "May 2023 - Present",
+        "text": "Pursuing a Bachelor of Science in Computer Science and Information Systems at Youngstown State University.", 
+        "id": 0},
+        {"alignment": "right", 
+        "imagePath": "/portfolio/images/timeline/berkeley.png",
+        "date": "May 2024 - July 2024",
+        "text": "Served as a Machine Learning Research Assistant Intern at Lawrence Berkeley National Laboratory.",
+        "id": 1},
+        {"alignment": "left", 
+        "imagePath": "/portfolio/images/timeline/TBD.png",
+        "date": "TBD",
+        "text": "What's next? I'm always on the lookout for exciting new opportunities!",
+        "id": 2}
+    ],
+    "timelineBarWidth": 10
+}

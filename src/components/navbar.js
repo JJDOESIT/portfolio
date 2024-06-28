@@ -35,7 +35,7 @@ export default function Navbar() {
       } else {
         setActive("");
       }
-    }, 100);
+    }, 50);
   }, []);
 
   return (
@@ -70,7 +70,7 @@ export default function Navbar() {
                   navigate("/projects/");
                 }}
               >
-                Portfolio
+                Projects
               </p>
             </li>
             <li>

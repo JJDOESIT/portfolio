@@ -1,0 +1,43 @@
+/* Target the timeline container div */
+.timeline-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+    bottom: 0;
+    opacity: 0;
+    animation: opacity-fade-in 1s ease-in 0.5s forwards;
+}
+
+/* Target the timeline title container div */
+.timeline-title{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Target the timeline title p tag */
+.timeline-title > p{
+    font-size: max(3rem, 5vw);
+    font-weight: bold;
+    color: white;
+    margin-bottom: 20px;
+}
+
+/* Target the vertical timeline bar */
+.timeline-bar{
+    position: relative;
+    background-color: gold;
+    border-radius: 3rem;
+}
+
+/* 550px */
+@media (max-width: 550px){
+    .timeline-title > p{
+        font-size: max(2rem, 7vw);
+    }
+}
+

@@ -1,0 +1,64 @@
+
+/* Target the timeline card container*/
+.timeline-card-container{
+    display: flex;
+    align-items: center;
+    position: absolute;
+}
+
+/* Target the card text container */
+.timeline-card-text-container{
+    background-color: rgb(130, 120, 15);
+    border: 1px solid rgb(150, 140, 10);
+    z-index: 2;
+}
+
+/* Target the left aligned card text container */
+.timeline-card-text-container-left{
+    box-shadow: rgb(0, 0, 0) 10px 10px 10px;
+}
+
+/* Target the right aligned card text container */
+.timeline-card-text-container-right{
+    box-shadow: rgb(0, 0, 0) -10px 10px 10px;
+}
+
+/* Target the card title p tag */
+.timeline-card-title{
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Target the card paragraph text p tag */
+.timeline-card-text{
+    color: rgb(220, 220, 220);
+    position: relative;
+    padding: 5px;
+}
+
+/* Target the card image */
+.timeline-card-image{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    border-radius: 0.5rem;
+}
+
+/* Target the left aligned card background */
+.timeline-card-image-background-left{
+    position: absolute;
+    background-color: rgb(70 70 70);
+    left: -5%;
+    bottom: -5%;
+}
+
+/* Target the right aligned card background */
+.timeline-card-image-background-right{
+    position: absolute;
+    background-color: rgb(70 70 70);
+    right: -5%;
+    bottom: -5%;
+}
