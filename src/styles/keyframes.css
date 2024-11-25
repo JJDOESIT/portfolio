@@ -16,6 +16,83 @@
     }
 }
 
+/* Long Fade in right */
+@keyframes long-fade-in-right{
+    0% {
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Long fade in right 1000px */
+@keyframes fade-in-right-1000{
+    0% {
+        transform: translateX(-1000px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+/* Long fade in right 250px */
+@keyframes fade-in-right-250{
+    0% {
+        transform: translateX(-250px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+/* Long fade out right */
+@keyframes long-fade-out-right{
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+}
+
+/* Long fade out right 100px reverse */
+@keyframes long-fade-out-right-100-reverse{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Long fade out left */
+@keyframes long-fade-out-left{
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+}
+
+/* Long fade out left 100px reverse */
+@keyframes long-fade-out-left-100-reverse{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 /* Fade in up */
 @keyframes fade-in-up{
     0% {
@@ -46,6 +123,52 @@
     100% {
         opacity: 1;
         transform: translateY(0px);  
+    }
+}
+
+/* 100px fade in down */
+@keyframes fade-in-down-100{
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);  
+    }
+}
+
+/* 100px fade in down reverse */
+@keyframes fade-in-down-100-reverse{
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-100px);  
+    }
+}
+
+/* 100px fade in up */
+@keyframes fade-in-up-100{
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);  
+    }
+}
+
+/* 100px fade in up reverse */
+@keyframes fade-in-up-100-reverse{
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(100px);  
     }
 }
 

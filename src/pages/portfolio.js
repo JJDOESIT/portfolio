@@ -1,56 +1,59 @@
-import "../styles/portfolio.css";
-import "../styles/keyframes.css";
-import imagesJSON from "../json/projects.json";
+import ProjectExplorer from "../components/projectExplorer";
+import ProjectCards from "../components/projectCards";
+import projectsJSON from "../json/projects.json";
+
 import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 export default function Portfolio() {
-  const [imageDict, setImageDict] = useState({});
-  const [imagesLoaded, setImagesLoaded] = useState(false);
+  // JSON data of the projects
+  const [projectsDict, setProjectsDict] = useState({});
+  // Whether the project data has been fetched or not
+  const [projectsLoaded, setProjectsLoaded] = useState(false);
+  // Whether the page has refreshed ( has the URL changed? )
+  const [hasPageRefreshed, setHasPageRefreshed] = useState(false);
+  // A count of how many times the page has refreshed
+  const [pageRefreshCount, setPageRefreshCount] = useState(0);
+  // Get the current location (URL)
+  const location = useLocation();
 
-  // Determine whether the image paths have been loaded into the image dict
+  // Load the projects from the JSON file
   useEffect(() => {
-    if (Object.keys(imageDict).length > 0) {
-      setImagesLoaded(true);
-    }
-  }, [imageDict]);
-
-  // Load an image map from the JSON file
-  useEffect(() => {
-    setImageDict(imagesJSON);
+    setProjectsDict(projectsJSON);
   }, []);
 
+  // Determine whether the projects have been loaded into the dict
+  useEffect(() => {
+    if (Object.keys(projectsDict).length > 0) {
+      setProjectsLoaded(true);
+    }
+  }, [projectsDict]);
+
+  // If the URL changes away from the base page, toggle the flag
+  // Note: Hacky solution
+  useEffect(() => {
+    if (pageRefreshCount !== 0) {
+      setHasPageRefreshed(true);
+    }
+    setPageRefreshCount((prev) => {
+      return prev + 1;
+    });
+  }, [location.pathname]);
+
   return (
-    <div className="portfolio-container">
-      <div className="portfolio-title">
-        <div className="wave-text">
-          <p>Projects</p>
-          <p>Projects</p>
-        </div>
-        <p>Explore My Previous Projects</p>
-      </div>
-      <div className="portfolio-grid">
-        {imagesLoaded &&
-          imageDict["projects"].map((card) => {
-            return (
-              <div className="card-container" key={card.id}>
-                <div className="card-image">
-                  <img src={card["image"]} alt="img"></img>
-                </div>
-                <div className="card-title">
-                  <p>{card.title}</p>
-                </div>
-                <div className="card-description">
-                  <p>{card.description}</p>
-                </div>
-                <div className="link-container">
-                  <a href={card.link} target="_blank" rel="noreferrer">
-                    <img src={imageDict["link-icon"]} alt="img"></img>
-                  </a>
-                </div>
-              </div>
-            );
-          })}
-      </div>
-    </div>
+    <>
+      {projectsLoaded && (
+        <>
+          <ProjectExplorer
+            projectsDict={projectsDict}
+            hasPageRefreshed={hasPageRefreshed}
+          ></ProjectExplorer>
+          <ProjectCards
+            projectsDict={projectsDict}
+            hasPageRefreshed={hasPageRefreshed}
+          ></ProjectCards>
+        </>
+      )}
+    </>
   );
 }

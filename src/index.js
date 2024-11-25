@@ -2,11 +2,11 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { RouterProvider, createHashRouter } from "react-router-dom";
 import Home from "./pages/home";
-import Portfolio from "./pages/portfolio";
 import Navbar from "./components/navbar";
 import Contact from "./pages/contact";
 import About from "./pages/about";
 import "./styles/index.css";
+import Portfolio from "./pages/portfolio";
 
 const router = createHashRouter([
   {

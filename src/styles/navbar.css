@@ -112,11 +112,15 @@
     left: 0;
 }
 
-/* Target github logo */
-.github-logo > a > img{
+/* Target logo div container */
+.navbar-logo-container{
+    padding: 3px;
+}
+
+/* Target logo images */
+.logos > a > img{
     display: flex;
-    width: 25px;
-    height: 25px;
+    padding-right: 10px;
 }
 
 /* Target 610px */

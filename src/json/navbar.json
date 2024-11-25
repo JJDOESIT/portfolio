@@ -1,5 +1,15 @@
 {
-    "mainImagePaths": {
-            "github-logo": "/portfolio/images/navbar/github-mark-white.png"
+    "mainImagePaths": [
+        {"logo": "/portfolio/images/navbar/linkdln-mark-white.png", 
+        "redirect": "https://www.linkedin.com/in/james-gaboriault-whitcomb-7100b4263/",   
+        "width": "30px", 
+        "height": "30px"
+        },
+
+        {"logo": "/portfolio/images/navbar/github-mark-white.png", 
+        "redirect": "https://github.com/JJDOESIT/", 
+        "width": "25px", 
+        "height": "25px"
         }
-    }
+                      ]
+}

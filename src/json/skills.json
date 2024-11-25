@@ -1,15 +1,18 @@
 {
     "tools": [
-            {"url":"/portfolio/images/skills/django-icon.png", "text": "DJANGO", "id": 0},
-            {"url":"/portfolio/images/skills/github-icon.png", "text": "Github", "id": 1},
-            {"url":"/portfolio/images/skills/react-icon.png", "text": "React","id": 2},
-            {"url": "/portfolio/images/skills/rest-icon.png", "text": "REST", "id": 3}
+            {"url":"/portfolio/images/skills/react-icon.png", "text": "React","id": 0},
+            {"url":"/portfolio/images/skills/nextjs-icon.png", "text": "Next.js","id": 1},
+            {"url":"/portfolio/images/skills/django-icon.png", "text": "DJANGO", "id": 2},
+            {"url": "/portfolio/images/skills/rest-icon.png", "text": "REST", "id": 3},
+            {"url":"/portfolio/images/skills/github-icon.png", "text": "Github", "id": 4}
     ],
     "languages": [
             {"url": "/portfolio/images/skills/cplusplus-icon.png","text": "C++", "id": 4},  
             {"url": "/portfolio/images/skills/python-icon.png", "text": "Python", "id": 5},
-            {"url": "/portfolio/images/skills/js-icon.png", "text": "Javascript", "id": 6},
-            {"url": "/portfolio/images/skills/html-icon.png","text": "HTML", "id": 7},
-            {"url":"/portfolio/images/skills/css-icon.png", "text": "CSS", "id": 8}
+            {"url":"/portfolio/images/skills/java-icon.png", "text": "Java", "id": 6},
+            {"url":"/portfolio/images/skills/c-sharp-icon.png", "text": "C#", "id": 7},
+            {"url": "/portfolio/images/skills/js-icon.png", "text": "Javascript", "id": 8},
+            {"url": "/portfolio/images/skills/html-icon.png","text": "HTML", "id": 9},
+            {"url":"/portfolio/images/skills/css-icon.png", "text": "CSS", "id": 10}       
     ]
 }

@@ -1,0 +1,16 @@
+/* Target the project pdf container */
+.project-pdf-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Target the project pdf canvas */
+  .project-pdf-container canvas {
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  

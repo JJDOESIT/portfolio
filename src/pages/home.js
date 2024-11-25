@@ -7,6 +7,8 @@ import randomQuote from "../functions/randomQuote";
 import randomQuoteLocal from "../functions/randomQuoteLocal";
 import ConfettiExplosion from "react-confetti-explosion";
 import { useNavigate } from "react-router-dom";
+import { MapPinIcon as MapPinIconOutline } from "@heroicons/react/24/outline";
+import { MapPinIcon as MapPinIconSolid } from "@heroicons/react/24/solid";
 import imageCarousel from "../functions/imageCarousel";
 
 export default function Home() {
@@ -18,6 +20,11 @@ export default function Home() {
   const [quote, setQuote] = useState({});
   // Boolean flag whether the confetti animation is playing
   const [isExploding, setIsExploding] = useState(false);
+  // Whether the user is hovering over the map pin icon
+  const [isHoveringOverMapPinIcon, setIsHoveringOverMapPinIcon] =
+    useState(false);
+  // Whether the map is visible or not
+  const [mapVisible, setMapVisible] = useState(false);
 
   const [imageDict, setImageDict] = useState({});
   const [imagesLoaded, setImagesLoaded] = useState(false);
@@ -74,6 +81,74 @@ export default function Home() {
     );
   }, [introTypeCount]);
 
+  // Trigger animations to load the map
+  function openMapAnimation() {
+    // Fade the image container out to the right
+    document
+      .querySelector(".home-image-container")
+      .classList.remove("home-fade-out-right-reverse");
+    document
+      .querySelector(".home-image-container")
+      .classList.add("home-fade-out-right");
+    // Fade the text container out to the left
+    document
+      .querySelector(".home-text-container")
+      .classList.remove("home-fade-out-left-reverse");
+    document
+      .querySelector(".home-text-container")
+      .classList.add("home-fade-out-left");
+    // Fade the map in from above
+    document
+      .querySelector(".home-map")
+      .classList.remove("home-map-fade-in-down-reverse");
+    document.querySelector(".home-map").classList.add("home-map-fade-in-down");
+    // Fade the map exit button in from below
+    document
+      .querySelector(".home-exit-map-button")
+      .classList.remove("home-map-fade-in-up-reverse");
+    document
+      .querySelector(".home-exit-map-button")
+      .classList.add("home-map-fade-in-up");
+    // Set the map visibility to true
+    setMapVisible(true);
+  }
+
+  // Trigger animations to close the map
+  function closeMapAnimation() {
+    // Fade the map out from below
+    document
+      .querySelector(".home-map")
+      .classList.remove("home-map-fade-in-down");
+    document
+      .querySelector(".home-map")
+      .classList.add("home-map-fade-in-down-reverse");
+    // Fade the map exit button out from above
+    document
+      .querySelector(".home-exit-map-button")
+      .classList.remove("home-map-fade-in-up");
+    document
+      .querySelector(".home-exit-map-button")
+      .classList.add("home-map-fade-in-up-reverse");
+    // Fade the home image container in from the right
+    document
+      .querySelector(".home-image-container")
+      .classList.remove("home-fade-out-right");
+    document
+      .querySelector(".home-image-container")
+      .classList.add("home-fade-out-right-reverse");
+    // Fade the home text container in from the left
+    document
+      .querySelector(".home-text-container")
+      .classList.remove("home-fade-out-left");
+    document
+      .querySelector(".home-text-container")
+      .classList.add("home-fade-out-left-reverse");
+    // Set the map visibility to true once the ending animation has finished
+    setTimeout(() => {
+      setMapVisible(false);
+    }, 950);
+  }
+
   // Carousel image effect
   /* useEffect(() => {
     if (imagesLoaded) {
@@ -112,6 +187,30 @@ export default function Home() {
           <div className="dynamic-text">
             <p>I'm a</p>
             <p>{introText}</p>
+          </div>
+          <div
+            className="home-location-container"
+            onClick={(event) => {
+              event.preventDefault();
+              openMapAnimation();
+            }}
+            onTouchStart={(event) => {
+              event.preventDefault();
+              openMapAnimation();
+            }}
+          >
+            {isHoveringOverMapPinIcon ? (
+              <MapPinIconSolid
+                className="home-map-pin-icon"
+                onMouseLeave={() => setIsHoveringOverMapPinIcon(false)}
+              ></MapPinIconSolid>
+            ) : (
+              <MapPinIconOutline
+                className="home-map-pin-icon"
+                onMouseEnter={() => setIsHoveringOverMapPinIcon(true)}
+              ></MapPinIconOutline>
+            )}
+            <p>Youngstown, OH</p>
           </div>
           <div className="home-button-container">
             <div className="contact-button-container">
@@ -163,6 +262,27 @@ export default function Home() {
               ""
             )}
           </div>
+        </div>
+        <div
+          className="home-map-container"
+          style={{ visibility: mapVisible ? "visible" : "hidden" }}
+        >
+          <iframe
+            title="Location"
+            className="home-map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48109.34312813243!2d-80.68074651216703!3d41.09447466241374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8833e1d16893bc9f%3A0x5d2c726a0cccf044!2sYoungstown%2C%20OH!5e0!3m2!1sen!2sus!4v1732224859341!5m2!1sen!2sus"
+            style={{ border: "0" }}
+          ></iframe>
+          <button
+            className="home-exit-map-button"
+            role="button"
+            onClick={() => {
+              setIsHoveringOverMapPinIcon(false);
+              closeMapAnimation();
+            }}
+          >
+            <span className="text">Go back</span>
+          </button>
         </div>
       </div>
     </>

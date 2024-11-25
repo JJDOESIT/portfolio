@@ -85,7 +85,15 @@
 
 /* Target 5th child */
 .about-text-container > :nth-child(5){
-    animation: fade-in-left 1s 0.5s forwards;
+    animation: fade-in-right 1s 0.5s forwards;
+}
+
+/* Target arrow down icon */
+.about-folder-arrow{
+    width: 30px;
+    height: 30px;
+    color: rgb(185, 176, 67);
+    padding-right: 5px;
 }
 
 /* Target first child in text container */
@@ -93,7 +101,7 @@
     color: rgb(255, 255, 255);
     display: flex;
     align-items: center;
-    animation: fade-in-right 1s 0.25s forwards;
+    animation: fade-in-right 1s 0.15s forwards;
 }
 
 /* Target the first child after element in text container */
@@ -105,6 +113,73 @@
     max-width: 200px;
     height: 3px;
     border-radius: 3rem;
+}
+
+/* Target the about resume container */
+.about-resume-container{
+    height: 130px;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+}
+
+/* Target the about resume download button */
+.about-resume-button {
+    width: fit-content;
+    height: fit-content
+}
+
+/* Target the input tag in the about resume button */
+.about-resume-button input {
+    display: block;
+    height: 50px;
+    width: 200px;
+    color: white;
+    font: 17px/50px sans-serif,Helvetica;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    background: #355C7D; 
+}
+
+/* Target the p tag in the about resume button */
+.about-resume-button > p {
+    background: rgb(153, 134, 25);
+    display: block;
+    height: 40px;
+    width: 180px;
+    margin: -50px 0 0 10px;
+    text-align: center;
+    font: 14px/45px sans-serif,Helvetica;
+    color: #eee;
+    position: absolute;
+    z-index: -1;
+    -webkit-transition: margin 0.7s cubic-bezier(0.6, -0.28, 0.74, 0.05);
+    -moz-transition: margin 0.7s cubic-bezier(0.6, -0.28, 0.74, 0.05);
+    -o-transition: margin 0.7s cubic-bezier(0.6, -0.28, 0.74, 0.05);
+    -ms-transition: margin 0.7s cubic-bezier(0.6, -0.28, 0.74, 0.05);
+    transition: margin 0.7s cubic-bezier(0.6, -0.28, 0.74, 0.05);
+}
+
+/* Target both the input and p tags in the about resume button */
+.about-resume-button > input, .about-resume-button > p {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 13px;
+    -webkit-box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+    -moz-box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+}
+
+/* Target resume button bottom on hover */
+.about-resume-button:hover .about-resume-button-bottom { 
+  margin: -10px 0 0 10px 
+}
+
+/* Target resume button top on hover */
+.about-resume-button:hover .about-resume-button-top {
+    margin: -80px 0 0 10px;
+    line-height: 35px;
 }
 
 /* 660px */
@@ -136,3 +211,5 @@
         overflow-y: visible;
     }
 }
+
+

@@ -84,19 +84,26 @@ export default function Navbar() {
               </p>
             </li>
           </ul>
-          <div className="github-logo">
-            <a
-              href="https://github.com/JJDOESIT/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              {imagesLoaded && (
-                <img
-                  src={imageDict["mainImagePaths"]["github-logo"]}
-                  alt="Github"
-                ></img>
-              )}
-            </a>
+          <div className="navbar-logo-container">
+            {imagesLoaded &&
+              imageDict["mainImagePaths"].map((logo, index) => {
+                return (
+                  <div className="logos" key={index}>
+                    <a href={logo["redirect"]} target="_blank" rel="noreferrer">
+                      {imagesLoaded && (
+                        <img
+                          src={logo["logo"]}
+                          alt="Logo"
+                          style={{
+                            width: logo["width"],
+                            height: logo["height"],
+                          }}
+                        ></img>
+                      )}
+                    </a>
+                  </div>
+                );
+              })}
           </div>
         </div>
       </nav>

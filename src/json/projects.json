@@ -6,14 +6,16 @@
       "description":
         "Mailbox style chess engine incorporated with a playable AI, special moves, and a GUI.",
       "link": "https://github.com/JJDOESIT/chess",
+      "pdfPath": "/portfolio/pdf/projects/chess.pdf",
       "id": 0
     },
     {
-      "image": "/portfolio/images/projects/btsea1.png",
-      "title": "BTSea",
+      "image": "/portfolio/images/projects/spritesheetlab1.png",
+      "title": "Spritesheet Lab",
       "description":
-        "Fully functional Bitcoin wallet equipped with many features operating on the Testnet network.",
-      "link": "https://github.com/JJDOESIT/btsea",
+        "A website created for students, designers, developers, and others to access royalty-free sprites.",
+      "link": "https://github.com/JJDOESIT/spritesheet-lab",
+      "pdfPath": "/portfolio/pdf/projects/spritesheetlab.pdf",
       "id": 1
     },
     {
@@ -22,6 +24,7 @@
       "description":
         "Pathfinding benchmarking tool that encompasses four different algorithms and a functional GUI.",
       "link": "https://github.com/JJDOESIT/mazev2",
+      "pdfPath": "/portfolio/pdf/projects/maze.pdf",
       "id": 2
     },
     {
@@ -30,9 +33,13 @@
       "description":
         "Pacman clone with map and configuration editors for enhanced customization.",
       "link": "https://github.com/JJDOESIT/pacman",
+      "pdfPath": "/portfolio/pdf/projects/pacman.pdf",
       "id": 3
     }
   ],
     
-    "link-icon": "/portfolio/images/projects/link-icon.png"
+    "link-icon": "/portfolio/images/projects/link-icon.png",
+
+    "redirect": "/projects?project=",
+    "base": { "title": "Projects", "redirect": "/projects/" }
 }
