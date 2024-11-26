@@ -13,7 +13,7 @@
 .about-title-container{
     display: flex;
     width: 80vw;
-    background-color: rgb(50,50,50);
+    background-color: var(--color-supporting-black);
     border: 1px solid rgb(63, 63, 63);
     border-radius: 2rem;
     margin-top: 20px;
@@ -45,7 +45,7 @@
 .about-image-container > :nth-child(2){
     display: flex;
     position: absolute;
-    background-color: rgb(185, 176, 67);
+    background-color: var(--color-dark-gold);
     width: 100%;
     height: 100%;
     left: -5%;
@@ -92,7 +92,7 @@
 .about-folder-arrow{
     width: 30px;
     height: 30px;
-    color: rgb(185, 176, 67);
+    color: var(--color-dark-gold);
     padding-right: 5px;
 }
 

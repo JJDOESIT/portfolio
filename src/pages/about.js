@@ -5,9 +5,11 @@ import { useState, useEffect, useRef } from "react";
 import Timeline from "../components/timeline";
 
 export default function About() {
+  // About page JSON info
   const [aboutDict, setAboutDict] = useState({});
+  // Whether the JSON has loaded into the dict
   const [aboutDictLoaded, setAboutDictLoaded] = useState(false);
-
+  // Ref to the page container (used by the timeline)
   const containerRef = useRef(null);
 
   // Function to download a file given a path to a public URL

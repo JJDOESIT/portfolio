@@ -49,7 +49,7 @@
 /* Target all inputs and text area except the submit button */
 .contact-form-container > div:not(:last-child) > input, .contact-form-container > div > textarea{
     background: none;
-    background-image: linear-gradient(rgb(36,36,36), rgb(36,36,36)), linear-gradient(45deg, rgb(192, 164, 42), rgb(64, 64, 64) 0%); 
+    background-image: linear-gradient(var(--color-main-black), var(--color-main-black)), linear-gradient(45deg, rgb(192, 164, 42), rgb(64, 64, 64) 0%); 
     background-clip: padding-box, border-box;
     background-origin: padding-box, border-box;
     border-radius: 0.5em;

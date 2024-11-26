@@ -10,6 +10,13 @@ html, body, #root{
     padding: 0;
 }
 
+:root{
+    --color-dark-gold: rgb(185, 176, 67);
+    --color-opaque-navy-blue: rgb(0, 150, 255, 0.2);
+    --color-main-black: rgb(36, 36, 36);
+    --color-supporting-black: rgb(50, 50, 50);
+}
+
 p {
     font-family: 'Montserrat',sans-serif;
 }

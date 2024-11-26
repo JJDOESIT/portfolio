@@ -5,6 +5,7 @@
       "title": "Chess Engine",
       "description":
         "Mailbox style chess engine incorporated with a playable AI, special moves, and a GUI.",
+      "tools": ["C++", "SFML"],
       "link": "https://github.com/JJDOESIT/chess",
       "pdfPath": "/portfolio/pdf/projects/chess.pdf",
       "id": 0
@@ -15,6 +16,7 @@
       "description":
         "A website created for students, designers, developers, and others to access royalty-free sprites.",
       "link": "https://github.com/JJDOESIT/spritesheet-lab",
+      "tools": ["JS", "Next.js", "MongoDB"],
       "pdfPath": "/portfolio/pdf/projects/spritesheetlab.pdf",
       "id": 1
     },
@@ -24,6 +26,7 @@
       "description":
         "Pathfinding benchmarking tool that encompasses four different algorithms and a functional GUI.",
       "link": "https://github.com/JJDOESIT/mazev2",
+      "tools": ["Python", "Pygame"],
       "pdfPath": "/portfolio/pdf/projects/maze.pdf",
       "id": 2
     },
@@ -33,6 +36,7 @@
       "description":
         "Pacman clone with map and configuration editors for enhanced customization.",
       "link": "https://github.com/JJDOESIT/pacman",
+      "tools": ["C++", "SFML"],
       "pdfPath": "/portfolio/pdf/projects/pacman.pdf",
       "id": 3
     }

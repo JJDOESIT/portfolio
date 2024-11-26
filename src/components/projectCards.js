@@ -79,19 +79,43 @@ export default function ProjectCards(props) {
                   <div className="card-image">
                     <img src={card["image"]} alt="img"></img>
                   </div>
-                  <div className="card-title">
-                    <p>{card.title}</p>
-                  </div>
-                  <div className="card-description">
-                    <p>{card.description}</p>
-                  </div>
-                  <div className="link-container">
-                    <a href={card.link} target="_blank" rel="noreferrer">
-                      <img
-                        src={props.projectsDict["link-icon"]}
-                        alt="img"
-                      ></img>
-                    </a>
+                  <div className="card-translate-container">
+                    <div className="card-title">
+                      <p>{card.title}</p>
+                    </div>
+                    <div className="card-description">
+                      <p>{card.description}</p>
+                    </div>
+                    <div className="card-tools-container">
+                      {card["tools"].map((tool, index) => {
+                        return (
+                          <p
+                            className={
+                              index === card["tools"].length - 1
+                                ? ""
+                                : "card-tool-with-bullet"
+                            }
+                          >
+                            {tool}
+                          </p>
+                        );
+                      })}
+                    </div>
+                    <div className="link-container">
+                      <a
+                        href={card.link}
+                        target="_blank"
+                        rel="noreferrer"
+                        onClick={(event) => {
+                          event.stopPropagation();
+                        }}
+                      >
+                        <img
+                          src={props.projectsDict["link-icon"]}
+                          alt="img"
+                        ></img>
+                      </a>
+                    </div>
                   </div>
                 </div>
               );
