@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://jjdoes.it",
+  "homepage": "https://jjdoesit.github.io",
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
     "@heroicons/react": "^2.2.0",
