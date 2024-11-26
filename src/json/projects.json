@@ -1,48 +1,48 @@
 {
     "projects": [
     {
-      "image": "/portfolio/images/projects/chess1.png",
+      "image": "/images/projects/chess1.png",
       "title": "Chess Engine",
       "description":
         "Mailbox style chess engine incorporated with a playable AI, special moves, and a GUI.",
       "tools": ["C++", "SFML"],
       "link": "https://github.com/JJDOESIT/chess",
-      "pdfPath": "/portfolio/pdf/projects/chess.pdf",
+      "pdfPath": "/pdf/projects/chess.pdf",
       "id": 0
     },
     {
-      "image": "/portfolio/images/projects/spritesheetlab1.png",
+      "image": "/images/projects/spritesheetlab1.png",
       "title": "Spritesheet Lab",
       "description":
         "A website created for students, designers, developers, and others to access royalty-free sprites.",
       "link": "https://github.com/JJDOESIT/spritesheet-lab",
       "tools": ["JS", "Next.js", "MongoDB"],
-      "pdfPath": "/portfolio/pdf/projects/spritesheetlab.pdf",
+      "pdfPath": "/pdf/projects/spritesheetlab.pdf",
       "id": 1
     },
     {
-      "image": "/portfolio/images/projects/maze1.png",
+      "image": "/images/projects/maze1.png",
       "title": "Maze Visualization",
       "description":
         "Pathfinding benchmarking tool that encompasses four different algorithms and a functional GUI.",
       "link": "https://github.com/JJDOESIT/mazev2",
       "tools": ["Python", "Pygame"],
-      "pdfPath": "/portfolio/pdf/projects/maze.pdf",
+      "pdfPath": "/pdf/projects/maze.pdf",
       "id": 2
     },
     {
-      "image": "/portfolio/images/projects/pacman1.png",
+      "image": "/images/projects/pacman1.png",
       "title": "Pacman",
       "description":
         "Pacman clone with map and configuration editors for enhanced customization.",
       "link": "https://github.com/JJDOESIT/pacman",
       "tools": ["C++", "SFML"],
-      "pdfPath": "/portfolio/pdf/projects/pacman.pdf",
+      "pdfPath": "/pdf/projects/pacman.pdf",
       "id": 3
     }
   ],
     
-    "link-icon": "/portfolio/images/projects/link-icon.png",
+    "link-icon": "/images/projects/link-icon.png",
 
     "redirect": "/projects?project=",
     "base": { "title": "Projects", "redirect": "/projects/" }

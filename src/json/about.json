@@ -1,6 +1,6 @@
 {
     "mainImagePaths": {
-            "headshot": "/portfolio/images/about/headshot-about.png"
+            "headshot": "/images/about/headshot-about.png"
     },
-    "resumePath": "/portfolio/pdf/about/resume.pdf"
+    "resumePath": "/pdf/about/resume.pdf"
     }
