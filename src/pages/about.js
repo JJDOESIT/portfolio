@@ -74,7 +74,6 @@ export default function About() {
                 alt="headshot"
               ></img>
             )}
-            <div></div>
           </div>
           <div className="about-text-container">
             <p>About Me</p>

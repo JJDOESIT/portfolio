@@ -30,7 +30,8 @@
     height: calc(20vw * 1.33);
     min-height: 333px;
     opacity: 0;
-    animation: opacity-fade-in 1s ease-in 0.25s forwards;
+    box-shadow: -20px 20px 0px var(--color-dark-gold);
+    animation: opacity-fade-in 2s cubic-bezier(0.25, 0.1, 0.25, 1) 0.25s forwards;
 }
 
 /* Target the image in image container */
@@ -39,18 +40,6 @@
     border-radius: 0.5rem;
     width: 100%;
     height: 100%;
-}
-
-/* Target second child in image container */
-.about-image-container > :nth-child(2){
-    display: flex;
-    position: absolute;
-    background-color: var(--color-dark-gold);
-    width: 100%;
-    height: 100%;
-    left: -5%;
-    bottom: -5%;
-    z-index: 1;
 }
 
 /* Target text container */
@@ -80,12 +69,18 @@
 
 /* Target third child */
 .about-text-container > :nth-child(3){
-    animation: fade-in-left 1s 0.25s forwards;
+    animation: fade-in-left 1s 0.25s ease-out forwards;
 }
 
 /* Target 5th child */
 .about-text-container > :nth-child(5){
-    animation: fade-in-right 1s 0.5s forwards;
+    animation: fade-in-right 1s 0.5s ease-out forwards;
+}
+
+/* Target resume button p tags (needed for firefox support) */
+.about-resume-button > p{
+    opacity: 0;
+    animation: fade-in-right 1s 0.5s ease-out forwards;
 }
 
 /* Target arrow down icon */
@@ -169,6 +164,10 @@
     -webkit-box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
     -moz-box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
     box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+}
+
+.about-resume-button > input:first-child{
+    border: 2px solid white;
 }
 
 /* Target resume button bottom on hover */

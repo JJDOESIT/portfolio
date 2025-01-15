@@ -1,5 +1,14 @@
 {
     "projects": [
+      {
+        "image": "/images/projects/physics-engine1.png",
+        "title": "2D Physics Engine",
+        "description":
+          "A 2D physics engine featuring support for both rigid and soft bodies with customizable controls.",
+        "tools": ["Java", "libGDX"],
+        "link": "https://github.com/JJDOESIT/2D-physics-engine",
+        "pdfPath": "/pdf/projects/physics-engine.pdf"
+      },
     {
       "image": "/images/projects/chess1.png",
       "title": "Chess Engine",
@@ -7,8 +16,7 @@
         "Mailbox style chess engine incorporated with a playable AI, special moves, and a GUI.",
       "tools": ["C++", "SFML"],
       "link": "https://github.com/JJDOESIT/chess",
-      "pdfPath": "/pdf/projects/chess.pdf",
-      "id": 0
+      "pdfPath": "/pdf/projects/chess.pdf"
     },
     {
       "image": "/images/projects/spritesheetlab1.png",
@@ -17,8 +25,7 @@
         "A website created for students, designers, developers, and others to access royalty-free sprites.",
       "link": "https://github.com/JJDOESIT/spritesheet-lab",
       "tools": ["JS", "Next.js", "MongoDB"],
-      "pdfPath": "/pdf/projects/spritesheetlab.pdf",
-      "id": 1
+      "pdfPath": "/pdf/projects/spritesheetlab.pdf"
     },
     {
       "image": "/images/projects/maze1.png",
@@ -27,8 +34,7 @@
         "Pathfinding benchmarking tool that encompasses four different algorithms and a functional GUI.",
       "link": "https://github.com/JJDOESIT/mazev2",
       "tools": ["Python", "Pygame"],
-      "pdfPath": "/pdf/projects/maze.pdf",
-      "id": 2
+      "pdfPath": "/pdf/projects/maze.pdf"
     },
     {
       "image": "/images/projects/pacman1.png",
@@ -37,8 +43,16 @@
         "Pacman clone with map and configuration editors for enhanced customization.",
       "link": "https://github.com/JJDOESIT/pacman",
       "tools": ["C++", "SFML"],
-      "pdfPath": "/pdf/projects/pacman.pdf",
-      "id": 3
+      "pdfPath": "/pdf/projects/pacman.pdf"
+    },
+    {
+      "image": "/images/projects/math-parser1.png",
+      "title": "Math Parser",
+      "description":
+        "A math expression parser leveraging a novel recursive algorithm developed by me.",
+      "link": "https://github.com/JJDOESIT/math-parser",
+      "tools": ["C#", ".NET Core"],
+      "pdfPath": "/pdf/projects/math-parser.pdf"
     }
   ],
     

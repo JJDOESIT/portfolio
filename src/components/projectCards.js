@@ -61,14 +61,14 @@ export default function ProjectCards(props) {
             <p>Explore My Previous Projects</p>
           </div>
           <div className="portfolio-grid">
-            {props.projectsDict["projects"].map((card) => {
+            {props.projectsDict["projects"].map((card, index) => {
               return (
                 <div
                   className="card-container"
                   style={{
                     animation: !props.hasPageRefreshed ? "" : "none",
                   }}
-                  key={card.id}
+                  key={index}
                   onClick={() => {
                     navigate(
                       props.projectsDict["redirect"] +
