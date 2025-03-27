@@ -11,6 +11,7 @@ html, body, #root{
 }
 
 :root{
+    --color-light-gold: rgb(255, 210, 0);
     --color-dark-gold: rgb(185, 176, 67);
     --color-opaque-navy-blue: rgb(0, 150, 255, 0.2);
     --color-main-black: rgb(36, 36, 36);

@@ -77,11 +77,6 @@
     font-size: 1.5rem;
 }
 
-/* Scale by 1.1 when hovering over home link */
-.navbar-container > div:first-child > p:hover{
-    transform: scale(1.1);
-}
-
 /* Target all p elements in the links list */
 .navbar-container > ul > li > p{
     position: relative;
@@ -106,7 +101,7 @@
     position: absolute;
     width: 100%;
     height: 4px;
-    background-color: rgb(255, 210, 0);
+    background-color: var(--color-light-gold);
     border-radius: 3rem;
     bottom: -5px;
     left: 0;
@@ -121,6 +116,28 @@
 .logos > a > img{
     display: flex;
     padding-right: 10px;
+    opacity: 0.8;
+}
+
+/* Target logo images on hover */
+.logos > a > img:hover{
+    opacity: 1;
+}
+
+/* Target title p tag */
+.navbar-home-elements-container > p {
+    transition: all 1s ease !important;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(to right, rgb(255, 255, 255) 50%, var(--color-light-gold) 99%);
+    background-size: 200%;
+    background-position: left center;
+}
+
+/* Smooth gradient effect on hover */
+.navbar-home-elements-container > p:hover {
+    background-position: right center;
 }
 
 /* Target 610px */

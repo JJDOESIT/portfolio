@@ -42,14 +42,13 @@ export default function Navbar() {
     <>
       <nav className="navbar">
         <div className="navbar-container">
-          <div>
-            <p
-              onClick={() => {
-                navigate("/");
-              }}
-            >
-              home()
-            </p>
+          <div
+            className="navbar-home-elements-container"
+            onClick={() => {
+              navigate("/");
+            }}
+          >
+            <p>{"</home>"}</p>
           </div>
           <ul>
             <li>

@@ -11,10 +11,15 @@
         "text": "Served as a Machine Learning Research Intern at Lawrence Berkeley National Laboratory.",
         "id": 1},
         {"alignment": "left", 
+        "imagePath": "/images/timeline/uhm.png",
+        "date": "May 2025 - Aug. 2025",
+        "text": "I'm excited to share that I've accepted an internship at Union Home Mortgage!",
+        "id": 2},
+        {"alignment": "right", 
         "imagePath": "/images/timeline/TBD.png",
         "date": "TBD",
         "text": "What's next? I'm always on the lookout for exciting new opportunities!",
-        "id": 2}
+        "id": 3}
     ],
     "timelineBarWidth": 10
 }
