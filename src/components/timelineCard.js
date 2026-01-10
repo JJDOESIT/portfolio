@@ -40,7 +40,7 @@ export default function TimelineCard(props) {
 
     // Fetch the element
     const element = document.getElementById(
-      "timeline-" + props.item.id + "-" + props.item.alignment
+      "timeline-" + props.id + "-" + props.item.alignment
     );
     // The top position of the element relative to the passed in container in terms of pixel count
     const elementTop =
@@ -69,8 +69,8 @@ export default function TimelineCard(props) {
       }
       // On resize, reset the height of the timeline bar
       props.timelineBarRef.current.style.height = `${
-        (props.item.id + 1) * sizes.imageHeight +
-        (timelineBarOffset * 2 + gapBetweenCards * (props.item.id + 1))
+        (props.id + 1) * sizes.imageHeight +
+        (timelineBarOffset * 2 + gapBetweenCards * (props.id + 1))
       }px`;
     }
   }, [sizes]);
@@ -85,11 +85,11 @@ export default function TimelineCard(props) {
       // Now that the cards have been rendered offscreen,
       // add a transition animation and delay
       const element = document.getElementById(
-        "timeline-" + props.item.id + "-" + props.item.alignment
+        "timeline-" + props.id + "-" + props.item.alignment
       );
       element.style.transition = "all 1s cubic-bezier(0.25, 0.1, 0.25, 1)";
       element.style.transitionDelay = `${
-        props.item.id * cardSlideInDelay + cardSlideInDelay
+        props.id * cardSlideInDelay + cardSlideInDelay
       }ms`;
     }
     // Remove event listener
@@ -103,21 +103,20 @@ export default function TimelineCard(props) {
       <>
         {pageLoaded ? (
           <div
-            key={props.item.id}
-            id={"timeline-" + props.item.id + "-right"}
+            id={"timeline-" + props.id + "-right"}
             className="timeline-card-container timeline-card-image-right"
             style={{
               width: `${sizes.imageWidth}px`,
               height: `${sizes.imageHeight}px`,
               transform: seen
                 ? `translate(${props.timelineBarWidth}px,${
-                    props.item.id * sizes.imageHeight +
-                    gapBetweenCards * props.item.id +
+                    props.id * sizes.imageHeight +
+                    gapBetweenCards * props.id +
                     timelineBarOffset
                   }px)`
                 : `translate(2000px,${
-                    props.item.id * sizes.imageWidth +
-                    gapBetweenCards * props.item.id +
+                    props.id * sizes.imageWidth +
+                    gapBetweenCards * props.id +
                     timelineBarOffset
                   }px)`,
               justifyContent: "start",
@@ -156,21 +155,20 @@ export default function TimelineCard(props) {
       <>
         {pageLoaded ? (
           <div
-            key={props.item.id}
-            id={"timeline-" + props.item.id + "-left"}
+            id={"timeline-" + props.id + "-left"}
             className="timeline-card-container timeline-card-image-left"
             style={{
               width: `${sizes.imageWidth}px`,
               height: `${sizes.imageHeight}px`,
               transform: seen
                 ? `translate(-${sizes.imageWidth}px,${
-                    props.item.id * sizes.imageHeight +
-                    gapBetweenCards * props.item.id +
+                    props.id * sizes.imageHeight +
+                    gapBetweenCards * props.id +
                     timelineBarOffset
                   }px)`
                 : `translate(-2000px,${
-                    props.item.id * sizes.imageWidth +
-                    gapBetweenCards * props.item.id +
+                    props.id * sizes.imageWidth +
+                    gapBetweenCards * props.id +
                     timelineBarOffset
                   }px)`,
               justifyContent: "start",

@@ -16,9 +16,10 @@
     justify-content: space-evenly;
 }
 
+/* Target the first and last elements in the navbar */
 .navbar-container > :first-child, .navbar-container > :last-child{
     transform: translateY(-200px);
-    animation: slide-down-intro 1s forwards;
+    animation: reset-position 1s forwards;
 }
 
 /* Target all p elements and change font */
@@ -54,21 +55,22 @@
     padding: 5px;
 }
 
+/* First link animation */
 .navbar-container > ul > li:nth-child(1){
     opacity: 0;
-    animation: fade-in-down 2s forwards;
+    animation: fade-in-down-50 2s forwards;
 }
 
 /* Delay the second link by 0.25s */
 .navbar-container > ul > li:nth-child(2){
     opacity: 0;
-    animation: fade-in-down 2s 0.25s forwards;
+    animation: fade-in-down-50 2s 0.25s forwards;
 }
 
 /* Delay the third link by 0.5s */
 .navbar-container > ul > li:nth-child(3){
     opacity: 0;
-    animation: fade-in-down 2s 0.5s forwards;
+    animation: fade-in-down-50 2s 0.5s forwards;
 }
 
 /* Set the home link color to white and increase size */
@@ -124,38 +126,50 @@
     opacity: 1;
 }
 
+/* Target title container */
+.navbar-home-elements-container{
+    transition: all ease-in-out 1s !important;
+}
+
 /* Target title p tag */
 .navbar-home-elements-container > p {
     transition: all 1s ease !important;
+    transform-origin: center;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-image: linear-gradient(to right, rgb(255, 255, 255) 50%, var(--color-light-gold) 99%);
     background-size: 200%;
     background-position: left center;
+    opacity: 0.8;
 }
 
 /* Smooth gradient effect on hover */
 .navbar-home-elements-container > p:hover {
     background-position: right center;
+    opacity: 1;
 }
+
 
 /* Target 610px */
 @media (max-width: 610px){
     .navbar-container > ul > li > p{
-        font-size: 0.75rem;
+        font-size: 0.8rem;
     }
     .navbar-container > div:first-child > p{
         font-size: 1rem;
     }
 }
 
-/* Target 250px */
-@media (max-width: 250px){
-    .navbar-container > ul > li > p{
-        font-size: 0.6rem;
+/* Target 385px */
+@media (max-width: 385px){
+    .navbar-container > ul > li:nth-child(2){
+        opacity: 0;
+        animation: fade-in-down-50 2s forwards;
     }
-    .navbar-container > div:first-child > p{
-        font-size: 0.9rem;
+
+    .navbar-container > ul > li:nth-child(3){
+        opacity: 0;
+        animation: fade-in-down-50 2s forwards;
     }
 }

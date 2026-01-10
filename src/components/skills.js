@@ -48,9 +48,9 @@ export default function Skills() {
       </div>
       <div className="skills-grid-container">
         {imagesLoaded &&
-          imageDict[type].map((data) => {
+          imageDict[type].map((data, index) => {
             return (
-              <div className="skills-card-container" key={data.id}>
+              <div className="skills-card-container" key={index}>
                 <div className="skills-image">
                   <img src={data.url} alt="logo"></img>
                 </div>

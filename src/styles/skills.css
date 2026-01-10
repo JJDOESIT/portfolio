@@ -2,7 +2,7 @@
 .skills-container{
     width: 90%;
     opacity: 0;
-    animation: fade-in-right 1s 0.5s forwards;
+    animation: fade-in-right-50 1s 0.5s forwards;
 }
 
 /* Target the first element */
@@ -24,7 +24,7 @@
     display: inline-flex;
     width: 80px;
     height: 3px;
-    background-color: gold;
+    background-color: var(--color-light-gold);
     border-radius: 3rem;
     margin-right: 10px;
 }
@@ -72,8 +72,9 @@
     display: flex;
     width: 130px;
     padding: 10px 20px 10px 20px;
-    border: 1px solid gold;
+    border: 1px solid var(--color-light-gold);
     border-radius: 0.75rem;
+    box-shadow: 0px 4px 7px black;
 }
 
 /* Target the skills image container */

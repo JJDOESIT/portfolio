@@ -2,5 +2,6 @@
     "mainImagePaths": {
             "headshot": "/images/about/headshot-about.png"
     },
-    "resumePath": "/pdf/about/resume.pdf"
-    }
+    "resumePath": "/pdf/about/resume.pdf",
+    "resumeFileSize": "200KB"
+}

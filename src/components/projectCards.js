@@ -64,57 +64,66 @@ export default function ProjectCards(props) {
             {props.projectsDict["projects"].map((card, index) => {
               return (
                 <div
-                  className="card-container"
-                  style={{
-                    animation: !props.hasPageRefreshed ? "" : "none",
-                  }}
+                  className="card-container-animation"
                   key={index}
-                  onClick={() => {
-                    navigate(
-                      props.projectsDict["redirect"] +
-                        card["title"].toLowerCase()
-                    );
-                  }}
+                  // If the page has refreshed, set the animation to none
+                  // else set the opacity for 0 (used for the intro animation)
+                  style={
+                    !props.hasPageRefreshed
+                      ? { opacity: 0 }
+                      : { animation: "none", opacity: 1 }
+                  }
                 >
-                  <div className="card-image">
-                    <img src={card["image"]} alt="img"></img>
-                  </div>
-                  <div className="card-translate-container">
-                    <div className="card-title">
-                      <p>{card.title}</p>
+                  <div
+                    className="card-container"
+                    onClick={() => {
+                      navigate(
+                        props.projectsDict["redirect"] +
+                          card["title"].toLowerCase()
+                      );
+                    }}
+                  >
+                    <div className="card-image">
+                      <img src={card["image"]} alt="img"></img>
                     </div>
-                    <div className="card-description">
-                      <p>{card.description}</p>
-                    </div>
-                    <div className="card-tools-container">
-                      {card["tools"].map((tool, index) => {
-                        return (
-                          <p
-                            className={
-                              index === card["tools"].length - 1
-                                ? ""
-                                : "card-tool-with-bullet"
-                            }
-                          >
-                            {tool}
-                          </p>
-                        );
-                      })}
-                    </div>
-                    <div className="link-container">
-                      <a
-                        href={card.link}
-                        target="_blank"
-                        rel="noreferrer"
-                        onClick={(event) => {
-                          event.stopPropagation();
-                        }}
-                      >
-                        <img
-                          src={props.projectsDict["link-icon"]}
-                          alt="img"
-                        ></img>
-                      </a>
+                    <div className="card-translate-container">
+                      <div className="card-title">
+                        <p>{card.title}</p>
+                      </div>
+                      <div className="card-description">
+                        <p>{card.description}</p>
+                      </div>
+                      <div className="card-tools-container">
+                        {card["tools"].map((tool, index) => {
+                          return (
+                            <p
+                              key={index}
+                              className={
+                                index === card["tools"].length - 1
+                                  ? ""
+                                  : "card-tool-with-bullet"
+                              }
+                            >
+                              {tool}
+                            </p>
+                          );
+                        })}
+                      </div>
+                      <div className="link-container">
+                        <a
+                          href={card.link}
+                          target="_blank"
+                          rel="noreferrer"
+                          onClick={(event) => {
+                            event.stopPropagation();
+                          }}
+                        >
+                          <img
+                            src={props.projectsDict["link-icon"]}
+                            alt="img"
+                          ></img>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>

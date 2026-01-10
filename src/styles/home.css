@@ -22,14 +22,14 @@
     color: white;
     font-weight: bold;
     opacity: 0;
-    animation: fade-in-down 1s 1s forwards;
+    animation: fade-in-down-50 1s 1s forwards;
 }
 
 /* Target the dynamic text container */
 .dynamic-text{
     display: flex;
     opacity: 0;
-    animation: fade-in-up 1s 1s forwards;
+    animation: fade-in-up-50 1s 1s forwards;
 }
 
 /* Target all p elements in the dynamic text container */
@@ -62,7 +62,7 @@
     display: flex;
     align-items: center;
     opacity: 0;
-    animation: fade-in-right 1s 1.5s forwards;
+    animation: fade-in-right-50 1s 1.5s forwards;
 }
 
 /* Target the contact button container */
@@ -131,27 +131,17 @@
     width: 25vw;
     min-width: 300px;
     opacity: 0;
-    animation: fade-in-up 1s 1s forwards;
+    animation: fade-in-up-50 1s 1s forwards;
+    box-shadow: 30px 30px 0 var(--color-supporting-black);
     margin-bottom: 50px;
 }
 
-/* Target all direct images in the home image container */
+/* Target image in the home image container */
 .home-image-container > img{
     z-index: 2;
     border-radius: 0.5rem;
     width: 100%;
     height: 100%;
-}
-
-/* Target the first image in the home image container */
-.home-image-one{
-    opacity: 1;
-}
-
-/* Target the second image in the home image container */
-.home-image-two{
-    position: absolute;
-    opacity: 0;
 }
 
 /* An animation to add to the home image carousel */
@@ -162,18 +152,6 @@
 /* An animation to add to the home image carousel */
 .home-image-carousel-left-in{
     animation: carousel-left-in 1s 0s forwards linear;
-}
-
-/* Create the offset background behind the image */
-.home-image-background{
-    display: flex;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: var(--color-supporting-black);
-    bottom: -10%;
-    left: 10%;
-    z-index: 1;
 }
 
 /* Create the text box in front of the image */
@@ -228,7 +206,7 @@
     opacity: 0;
     align-items: center;
     margin-top: 20px;
-    animation: fade-in-up 1s 1s forwards;
+    animation: fade-in-up-50 1s 1s forwards;
 }
 
 /* Target the home location container on hover */
@@ -256,26 +234,26 @@
 
 /* Fade out right animation */
 .home-fade-out-right{
-    animation: long-fade-out-right 750ms 0ms ease-in-out forwards;
+    animation: fade-out-right-100 750ms 0ms ease-in-out forwards;
 }
 
 /* Fade back in from the right animation */
 .home-fade-out-right-reverse{
     transform: translateX(100px);
     opacity: 0;
-    animation: long-fade-out-right-100-reverse 750ms 200ms ease-in-out forwards;
+    animation: fade-out-right-100-reverse 750ms 200ms ease-in-out forwards;
 }
 
 /* Fade out left animation */
 .home-fade-out-left{
-    animation: long-fade-out-left 750ms 0s ease-in-out forwards;
+    animation: fade-out-left-100 750ms 0s ease-in-out forwards;
 }
 
 /* Fade back in from the left animation */
 .home-fade-out-left-reverse{
     opacity: 0;
     transform: translateX(-100px);
-    animation: long-fade-out-left-100-reverse 750ms 200ms ease-in-out forwards;
+    animation: fade-out-left-100-reverse 750ms 200ms ease-in-out forwards;
 }
 
 /* Fade down animation */
@@ -413,4 +391,7 @@
         width: calc(100% - 20px);
     }
 
+    .home-image-container{
+        box-shadow: 20px 20px 0 var(--color-supporting-black);
+    }
 }

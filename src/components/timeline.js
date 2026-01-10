@@ -30,11 +30,12 @@ export default function Timeline(props) {
             ref={timelineBarRef}
             style={{ width: timelineDict.timelineBarWidth }}
           >
-            {timelineDict.timeline.map((item) => {
+            {timelineDict.timeline.map((item, index) => {
               return (
                 <TimelineCard
                   item={item}
-                  key={item.id}
+                  key={index}
+                  id={index}
                   timelineBarWidth={timelineDict.timelineBarWidth}
                   scrollRef={props.scrollRef}
                   timelineBarRef={timelineBarRef}

@@ -1,0 +1,69 @@
+/* Target download button p tags (needed for firefox support) */
+.download-button-container > p{
+    opacity: 0;
+    animation: fade-in-right-50 1s 0.5s ease-out forwards;
+}
+
+/* Target the download button */
+.download-button-container {
+    width: fit-content;
+    height: fit-content
+}
+
+/* Target the input tag in the download button */
+.download-button-container input {
+    display: block;
+    height: 50px;
+    width: 200px;
+    color: white;
+    font: 17px/50px sans-serif,Helvetica;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    background: #355C7D; 
+}
+
+/* Target the p tag in the download button */
+.download-button-container > p {
+    background: rgb(153, 134, 25);
+    display: block;
+    height: 40px;
+    width: 180px;
+    margin: -50px 0 0 10px;
+    text-align: center;
+    font: 14px/45px sans-serif,Helvetica;
+    color: #eee;
+    position: absolute;
+    z-index: -1;
+    -webkit-transition: all 0.7s cubic-bezier(0.6, -0.28, 0.74, 0.05);
+    -moz-transition: all 0.7s cubic-bezier(0.6, -0.28, 0.74, 0.05);
+    -o-transition: all 0.7s cubic-bezier(0.6, -0.28, 0.74, 0.05);
+    -ms-transition: all 0.7s cubic-bezier(0.6, -0.28, 0.74, 0.05);
+    transition: all 0.7s cubic-bezier(0.6, -0.28, 0.74, 0.05);
+}
+
+/* Target both the input and p tags in the download button */
+.download-button-container > input, .download-button-container > p {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 13px;
+    -webkit-box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+    -moz-box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+}
+
+/* Target first child of the download button on hover */
+.download-button-container > input:first-child{
+    border: 2px solid white;
+}
+
+/* Target download button bottom on hover */
+.download-button-container:hover .download-button-bottom { 
+  margin: -10px 0 0 10px 
+}
+
+/* Target download button top on hover */
+.download-button-container:hover .download-button-top {
+    margin: -80px 0 0 10px;
+    line-height: 35px;
+}

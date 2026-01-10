@@ -3,23 +3,28 @@
         {"alignment": "left", 
         "imagePath": "/images/timeline/ysu.png",
         "date": "May 2023 - Present",
-        "text": "Pursuing a Bachelor of Science in Computer Science and Information Systems at Youngstown State University.", 
-        "id": 0},
+        "text": "Pursuing a Bachelor of Science in Computer Science and Information Systems at Youngstown State University." 
+        },
         {"alignment": "right", 
         "imagePath": "/images/timeline/berkeley.png",
         "date": "May 2024 - July 2024",
-        "text": "Served as a Machine Learning Research Intern at Lawrence Berkeley National Laboratory.",
-        "id": 1},
+        "text": "Served as a Machine Learning Research Intern at Lawrence Berkeley National Laboratory."
+        },
         {"alignment": "left", 
         "imagePath": "/images/timeline/uhm.png",
-        "date": "May 2025 - Aug. 2025",
-        "text": "I'm excited to share that I've accepted an internship at Union Home Mortgage!",
-        "id": 2},
+        "date": "May 2025 - Jan. 2026",
+        "text": "Worked as a Software Developer Intern at Union Home Mortgage."
+        },
         {"alignment": "right", 
+        "imagePath": "/images/timeline/metlife.png",
+        "date": "June 2026 - Aug. 2026",
+        "text": "I'm excited to share that I've accepted an internship at MetLife!"
+        },
+        {"alignment": "left", 
         "imagePath": "/images/timeline/TBD.png",
         "date": "TBD",
-        "text": "What's next? I'm always on the lookout for exciting new opportunities!",
-        "id": 3}
+        "text": "What's next? I'm always on the lookout for exciting new opportunities!"
+        }
     ],
     "timelineBarWidth": 10
 }

@@ -1,7 +1,5 @@
 {
-"mainImagePaths": {
-        "goldenGateBridge": "/images/home/goldenGateBridge.png",
-        "lake": "/images/home/lake.png",
-        "hiking": "/images/home/hiking.png"
+    "mainImagePaths": {
+            "headshot": "/images/home/ski.png"
     }
 }

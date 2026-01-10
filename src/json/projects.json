@@ -28,6 +28,15 @@
       "pdfPath": "/pdf/projects/spritesheetlab.pdf"
     },
     {
+      "image": "/images/projects/powder.png",
+      "title": "Powder Simulation",
+      "description":
+        "A powder physics simulation focused on granularity, and realistic cellular interactions.",
+      "link": "https://github.com/JJDOESIT/powder-physics",
+      "tools": ["Java", "libGDX"],
+      "pdfPath": "/pdf/projects/powder.pdf"
+    },
+    {
       "image": "/images/projects/maze1.png",
       "title": "Maze Visualization",
       "description":

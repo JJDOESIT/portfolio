@@ -3,13 +3,11 @@ import "../styles/keyframes.css";
 import imagesJSON from "../json/home.json";
 import { useState, useEffect } from "react";
 import typingLetters from "../functions/typingLetters";
-import randomQuote from "../functions/randomQuote";
 import randomQuoteLocal from "../functions/randomQuoteLocal";
 import ConfettiExplosion from "react-confetti-explosion";
 import { useNavigate } from "react-router-dom";
 import { MapPinIcon as MapPinIconOutline } from "@heroicons/react/24/outline";
 import { MapPinIcon as MapPinIconSolid } from "@heroicons/react/24/solid";
-import imageCarousel from "../functions/imageCarousel";
 
 export default function Home() {
   // The length of the current dynamic text
@@ -33,7 +31,6 @@ export default function Home() {
 
   //Random quotes
   useEffect(() => {
-    //randomQuote(100, 140, setQuote);
     setQuote(randomQuoteLocal(100, 140));
   }, []);
 
@@ -149,35 +146,6 @@ export default function Home() {
     }, 950);
   }
 
-  // Carousel image effect
-  /* useEffect(() => {
-    if (imagesLoaded) {
-      const imageClassNameOne = ".home-image-one";
-      const imageClassNameTwo = ".home-image-two";
-      const outClassName = "home-image-carousel-left-out";
-      const inClassName = "home-image-carousel-left-in";
-      const imageList = [
-        imageDict["mainImagePaths"]["goldenGateBridge"],
-        imageDict["mainImagePaths"]["hiking"], // Input list must match the src originally set in the HTML
-        imageDict["mainImagePaths"]["lake"],
-      ];
-      const imageDisplayTime = 5000;
-      const imageSwapDelay = 500;
-      var intervalID = imageCarousel(
-        imageClassNameOne,
-        imageClassNameTwo,
-        outClassName,
-        inClassName,
-        imageList,
-        imageDisplayTime,
-        imageSwapDelay
-      );
-    }
-    return () => {
-      clearInterval(intervalID);
-    };
-  }, [imagesLoaded, imageDict]); */
-
   return (
     <>
       <div className="home-container">
@@ -227,7 +195,6 @@ export default function Home() {
                 type="button"
                 onClick={() => {
                   if (!isExploding) {
-                    //randomQuote(100, 140, setQuote);
                     setQuote(randomQuoteLocal(100, 140));
                     setIsExploding(true);
                   }
@@ -241,18 +208,12 @@ export default function Home() {
           {imagesLoaded && (
             <>
               <img
-                src={imageDict["mainImagePaths"]["hiking"]}
+                src={imageDict["mainImagePaths"]["headshot"]}
                 alt="Icon"
-                className="home-image-one"
-              ></img>
-              <img
-                src={imageDict["mainImagePaths"]["goldenGateBridge"]}
-                alt="Icon"
-                className="home-image-two"
+                className="home-image"
               ></img>
             </>
           )}
-          <div className="home-image-background"></div>
           <div className="home-image-text-container">
             <p>"{quote.content}"</p>
             <p>- {quote.author}</p>

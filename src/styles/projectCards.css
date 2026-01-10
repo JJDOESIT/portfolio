@@ -75,12 +75,14 @@
 
 /* Target all odd childs */
 .portfolio-grid > :nth-child(odd){
-    animation: portfolio-fade-in-down 1750ms;
+    opacity: 0;
+    animation: fade-in-down-20 1.75s 0.25s forwards;
 }
 
 /* Target all even childs */
 .portfolio-grid > :nth-child(even){
-    animation: portfolio-fade-in-up 1750ms;
+    opacity: 0;
+    animation: fade-in-up-20 1.75s 0.25s forwards;
 }
 
 /* Target all card containers */
@@ -188,12 +190,12 @@
 /* 550px */
 @media (max-width: 550px){
     :root{
-        --card-width: 420px;
+        --card-width: 440px;
     }
 }
 
-/* 450px */
-@media (max-width: 450px){
+/* 480px */
+@media (max-width: 480px){
     :root{
         --card-width: 370px;
         --card-height: 400px;

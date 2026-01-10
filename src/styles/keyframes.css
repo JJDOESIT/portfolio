@@ -1,312 +1,232 @@
+/* =========================
+   MISC / NON-DIRECTIONAL
+   ========================= */
+
 /* Blinking cursor */
-@keyframes cursor-blink{
+@keyframes cursor-blink {
     100% {
         border: none;
     }
 }
 
-/* Fade in right */
-@keyframes fade-in-right{
-    0% {
-        transform: translateX(-50px);
+/* Fade in opacity only */
+@keyframes opacity-fade-in {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Reset position */
+@keyframes reset-position {
+    100% {
+        transform: translateY(0);
     }
+}
+
+/* Wave animation */
+@keyframes wave-animate {
+    0%, 100% {
+        clip-path: polygon(
+            0% 45%, 16% 44%, 33% 50%, 54% 60%,
+            70% 61%, 84% 59%, 100% 52%,
+            100% 100%, 0% 100%
+        );
+    }
+
+    50% {
+        clip-path: polygon(
+            0% 60%, 15% 65%, 34% 66%, 51% 62%,
+            67% 50%, 84% 45%, 100% 46%,
+            100% 100%, 0% 100%
+        );
+    }
+}
+
+/* =========================
+   RIGHT (X+)
+   ========================= */
+
+/* Fade in right 10px */
+@keyframes fade-in-right-10 {
+    0% { transform: translateX(-10px); }
     100% {
         opacity: 1;
         transform: translateX(0);
     }
 }
 
-/* Long Fade in right */
-@keyframes long-fade-in-right{
-    0% {
-        transform: translateX(-100px);
-    }
+/* Fade in right 50px */
+@keyframes fade-in-right-50 {
+    0% { transform: translateX(-50px); }
     100% {
         opacity: 1;
         transform: translateX(0);
     }
 }
 
-/* Long fade in right 1000px */
-@keyframes fade-in-right-1000{
-    0% {
-        transform: translateX(-1000px);
-    }
+/* Fade in right 100px */
+@keyframes fade-in-right-100 {
+    0% { transform: translateX(-100px); }
     100% {
         opacity: 1;
-        transform: translateX(0px);
+        transform: translateX(0);
     }
 }
 
-/* Long fade in right 250px */
-@keyframes fade-in-right-250{
-    0% {
-        transform: translateX(-250px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0px);
-    }
-}
-
-/* Long fade out right */
-@keyframes long-fade-out-right{
-    0% {
-        opacity: 1;
-    }
+/* Fade out right 100px */
+@keyframes fade-out-right-100 {
+    0% { opacity: 1; }
     100% {
         opacity: 0;
         transform: translateX(100px);
     }
 }
 
-/* Long fade out right 100px reverse */
-@keyframes long-fade-out-right-100-reverse{
-    0% {
-        opacity: 0;
-    }
+/* Fade out right 100px reverse */
+@keyframes fade-out-right-100-reverse {
+    0% { opacity: 0; }
     100% {
         opacity: 1;
         transform: translateX(0);
     }
 }
 
-/* Long fade out left */
-@keyframes long-fade-out-left{
-    0% {
+/* Fade in right 250px */
+@keyframes fade-in-right-250 {
+    0% { transform: translateX(-250px); }
+    100% {
         opacity: 1;
+        transform: translateX(0);
     }
+}
+
+/* Fade in right 1000px */
+@keyframes fade-in-right-1000 {
+    0% { transform: translateX(-1000px); }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* =========================
+   LEFT (X−)
+   ========================= */
+
+/* Fade in left 50px */
+@keyframes fade-in-left-50 {
+    0% { transform: translateX(50px); }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Fade out left 100px */
+@keyframes fade-out-left-100 {
+    0% { opacity: 1; }
     100% {
         opacity: 0;
         transform: translateX(-100px);
     }
 }
 
-/* Long fade out left 100px reverse */
-@keyframes long-fade-out-left-100-reverse{
-    0% {
-        opacity: 0;
-    }
+/* Fade out left 100px reverse */
+@keyframes fade-out-left-100-reverse {
+    0% { opacity: 0; }
     100% {
         opacity: 1;
         transform: translateX(0);
     }
 }
 
-/* Fade in up */
-@keyframes fade-in-up{
-    0% {
-        transform: translateY(50px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0px);  
-    }
-}
+/* =========================
+   UP (Y+)
+   ========================= */
 
-/* Fade in left */
-@keyframes fade-in-left{
+/* Fade in up 20px */
+@keyframes fade-in-up-20 {
     0% {
-        transform: translateX(50px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0px);  
-    }
-}
-
-/* Fade in down */
-@keyframes fade-in-down{
-    0% {
-        transform: translateY(-50px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0px);  
-    }
-}
-
-/* 100px fade in down */
-@keyframes fade-in-down-100{
-    0% {
+        transform: translateY(20px);
         opacity: 0;
-        transform: translateY(-100px);
     }
     100% {
+        transform: translateY(0);
         opacity: 1;
-        transform: translateY(0px);  
     }
 }
 
-/* 100px fade in down reverse */
-@keyframes fade-in-down-100-reverse{
-    0% {
-        opacity: 1;
-    }
+/* Fade in up 50px */
+@keyframes fade-in-up-50 {
+    0% { transform: translateY(50px); }
     100% {
-        opacity: 0;
-        transform: translateY(-100px);  
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
-/* 100px fade in up */
-@keyframes fade-in-up-100{
+/* Fade in up 100px */
+@keyframes fade-in-up-100 {
     0% {
         opacity: 0;
         transform: translateY(100px);
     }
     100% {
         opacity: 1;
-        transform: translateY(0px);  
+        transform: translateY(0);
     }
 }
 
-/* 100px fade in up reverse */
-@keyframes fade-in-up-100-reverse{
-    0% {
-        opacity: 1;
-    }
+/* Fade in up 100px reverse */
+@keyframes fade-in-up-100-reverse {
+    0% { opacity: 1; }
     100% {
         opacity: 0;
-        transform: translateY(100px);  
+        transform: translateY(100px);
     }
 }
 
-/* Short fade in down */
-@keyframes short-fade-in-down{
-    0% {
-        transform: translateY(-20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0px);  
-    }
-}
+/* =========================
+   DOWN (Y−)
+   ========================= */
 
-/* Fade in down for portfolio page */
-@keyframes portfolio-fade-in-down {
+/* Fade in down 20px */
+@keyframes fade-in-down-20 {
     0% {
         transform: translateY(-20px);
         opacity: 0;
     }
-
-    100%{
+    100% {
         transform: translateY(0);
         opacity: 1;
     }
 }
 
-/* Fade in opacity */
-@keyframes opacity-fade-in{
+/* Fade in down 50px */
+@keyframes fade-in-down-50 {
+    0% { transform: translateY(-50px); }
     100% {
         opacity: 1;
-    }
-}
-
-/* Fade in up for portfolio page */
-@keyframes portfolio-fade-in-up {
-    0% {
-        transform: translateY(20px);
-        opacity: 0;
-    }
-
-    100%{
-        transform: translateY(0);
-        opacity: 1;
-    }  
-}
-
-/* Move down */
-@keyframes slide-down-intro{
-    100% {
         transform: translateY(0);
     }
 }
 
-/* Slide in left */ 
-@keyframes work-slide-left {
-    100% {
-        transform: translateX(0);
-    } 
-}
-
-/* Slide in right */ 
-@keyframes work-slide-right {
-    100% {
-        transform: translateX(0);
-    } 
-}
-
-/* Carousel fade left out */
-@keyframes carousel-left-out{
-    0% { 
-        transform: translateX(0) translateY(0);
-        opacity: 1; 
-    }
-    90% { 
-        transform: translateX(-40px) translateY(-20px);
-        opacity: 0.5; 
-    }
-    95%{
-        transform: translateX(-40px) translateY(-20px);
-        opacity: 0;  
-    }
-    99% {
-        transform: translateX(-40px) translateY(-20px);
-        opacity: 0;  
-    }
-    100% { 
-        transform: translateX(0) translateY(0);
-        opacity: 0; 
-    }
-}
-
-/* Carousel fade left in */
-@keyframes carousel-left-in{
+/* Fade in down 100px */
+@keyframes fade-in-down-100 {
     0% {
         opacity: 0;
-        transform: translateX(80px) translateY(-20px);
-    }
-    20% {
-        opacity: 0.7;
-    }
-    30% {
-        opacity: 1;
+        transform: translateY(-100px);
     }
     100% {
-        transform: translateX(0);
         opacity: 1;
+        transform: translateY(0);
     }
 }
 
-/* Wave animation */
-@keyframes wave-animate {
-	0%,
-	100% {
-		clip-path: polygon(
-			0% 45%,
-			16% 44%,
-			33% 50%,
-			54% 60%,
-			70% 61%,
-			84% 59%,
-			100% 52%,
-			100% 100%,
-			0% 100%
-		);
-	}
-
-	50% {
-		clip-path: polygon(
-			0% 60%,
-			15% 65%,
-			34% 66%,
-			51% 62%,
-			67% 50%,
-			84% 45%,
-			100% 46%,
-			100% 100%,
-			0% 100%
-		);
-	}
+/* Fade in down 100px reverse */
+@keyframes fade-in-down-100-reverse {
+    0% { opacity: 1; }
+    100% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
 }

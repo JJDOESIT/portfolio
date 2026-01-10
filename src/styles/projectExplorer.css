@@ -15,7 +15,7 @@
 
 /* Target project explorer animation */
 .project-explorer-animation{
-    animation: fade-in-right-1000 1.5s 0s ease-in forwards;
+    animation: fade-in-right-1000 1.75s 0.25s ease-in forwards;
 }
 
 /* Target project explorer scrollbar */
