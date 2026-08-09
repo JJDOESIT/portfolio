@@ -23,9 +23,9 @@
       "title": "TeXume",
       "description":
         "A LaTeX-powered resume builder with easy-to-use resume templates.",
-      "link": "https://github.com/JJDOESIT/texume-public",
+      "link": "https://github.com/JJDOESIT/teXume-public",
       "tools": ["Next.js", "Spring Boot", "Docker"],
-      "pdfPath": "/pdf/projects/teXume.pdf"
+      "pdfPath": "/pdf/projects/texume.pdf"
     },
     {
       "image": "/images/projects/powder.png",
