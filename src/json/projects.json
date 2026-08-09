@@ -19,13 +19,13 @@
       "pdfPath": "/pdf/projects/chess.pdf"
     },
     {
-      "image": "/images/projects/spritesheetlab1.png",
-      "title": "Spritesheet Lab",
+      "image": "/images/projects/texume.png",
+      "title": "TeXume",
       "description":
-        "A website created for students, designers, developers, and others to access royalty-free sprites.",
-      "link": "https://github.com/JJDOESIT/spritesheet-lab",
-      "tools": ["JS", "Next.js", "MongoDB"],
-      "pdfPath": "/pdf/projects/spritesheetlab.pdf"
+        "A LaTeX-powered resume builder with easy-to-use resume templates.",
+      "link": "https://github.com/JJDOESIT/texume-public",
+      "tools": ["Next.js", "Spring Boot", "Docker"],
+      "pdfPath": "/pdf/projects/teXume.pdf"
     },
     {
       "image": "/images/projects/powder.png",
@@ -53,6 +53,15 @@
       "link": "https://github.com/JJDOESIT/pacman",
       "tools": ["C++", "SFML"],
       "pdfPath": "/pdf/projects/pacman.pdf"
+    },
+    {
+      "image": "/images/projects/spritesheetlab1.png",
+      "title": "Spritesheet Lab",
+      "description":
+        "A website created for students, designers, developers, and others to access royalty-free sprites.",
+      "link": "https://github.com/JJDOESIT/spritesheet-lab",
+      "tools": ["JS", "Next.js", "MongoDB"],
+      "pdfPath": "/pdf/projects/spritesheetlab.pdf"
     },
     {
       "image": "/images/projects/math-parser1.png",
